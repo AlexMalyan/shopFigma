@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html', {
+"title": "The Brand | main"
+})
+
+<body>
+  @@include('_header.html')
+
+  <div class="hero container ">
+    <div class="hero__title">
+      <!-- TODO переделать главный тег -->
+      <h1>
+        THE BRAND
+      </h1>
+      <br>
+      <p>
+        OF LUXERIOUS <span>FASHION</span>
+      </p>
+    </div>
+  </div>
+  <div class="offer container">
+    <!-- TODO ссылками сделать -->
+    <div class="offer__for-men offer__item">
+      <img src=" img/for_men.jpg" alt="women">
+      <div class="offer__title">
+        <p>HOT DEAL</p>
+        <h3> FOR MEN</h3>
+      </div>
+    </div>
+    <div class="offer__for-women offer__item">
+      <img src="img/for_woman.jpg" alt="men ">
+      <div class="offer__title">
+        <p> 30% OFF</p>
+        <h3>FOR WOMEN</h3>
+      </div>
+    </div>
+    <div class="offer__for-kids offer__item"><img src="img/for_kids.jpg" alt="kids">
+      <div class="offer__title">
+        <p>NEW ARRIVALS</p>
+        <h3>FOR KIDS</h3>
+      </div>
+    </div>
+    <div class="offer__accesories offer__item">
+      <div class="offer__title">
+        <p> LUXIROUS & TRENDY</p>
+        <h3> ACCESORIES</h3>
+      </div>
+      <img src="img/ACCESORIES.jpg" alt="accesories">
+
+    </div>
+  </div>
+
+  <div class="products container">
+    <div class="products__header">
+      <h3>Fetured Items</h3>
+      <p>Shop for items based on what we featured in this week</p>
+    </div>
+    <div class="products__body">
+      @@loop('_card.html',[
+      {"img": "1", "alt": "product-1"},
+      {"img": "2", "alt": "product-2"},
+      {"img": "3", "alt": "product-3"},
+      {"img": "4", "alt": "product-4"},
+      {"img": "5", "alt": "product-5"},
+      {"img": "6", "alt": "product-6"},
+      ])
+    </div>
+    <a href="" class="products__button button">Browse All Product</a>
+
+  </div>
+
+  <div class="feature container">
+    @@loop('_feature-item.html',[
+    {"img":"driver", "title":"Free Delivery"},
+    {"img":"coupon", "title":"Sales & discounts"},
+    {"img":"crown", "title":"Quality assurance"},
+    ])
+
+  </div>
+  <div class="block container">
+    <div class="block__comments block__item--basis">
+      <img src="img/Intersect.jpg" alt="Intersect" class="block__img">
+      <q class="block__quote">
+        Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum
+      </q>
+    </div>
+    <div class="block__subscribe block__item--basis">
+      <h4 class="block__subscribe-title">
+        SUBSCRIBE
+      </h4>
+      <p class="block__subscribe-text">
+        FOR OUR NEWLETTER AND PROMOTION
+      </p>
+      <form class="subscribe" action="#">
+        <!-- TODO Не пойму почему текст выстроился по центру -->
+        <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
+        <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  @@include_once('_footer.html')
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

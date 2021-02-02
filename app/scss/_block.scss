@@ -1,0 +1,80 @@
+.block{
+  background-image: url(../img/photo_subscribe.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  &__item--basis{
+    flex-basis: 33.33%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img{
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    margin-bottom: $sp*2;
+  }
+  &__quote{
+    quotes: "\201c" "\201d";
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__subscribe-title{
+    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 167.2%;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &__subscribe-text{
+    margin: $sp auto $sp*2;
+    text-transform: uppercase;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+  }
+  &__comments{
+    
+  }
+  &__subscribe{
+    &-input {
+       border: none;
+       background: #E1E1E1;
+       width: 256px;
+       height: 49px;
+       border-top-left-radius: 22px;
+       border-bottom-left-radius: 22px;
+       padding-left: 22px;      
+      font-size: 14px;
+      line-height: 17px;
+      color: $black;
+      opacity: 0.67;       
+    }
+    &-submit{
+      width: 100px;
+      height: 49px;      
+      margin-left: -3px;
+      border-top-right-radius: 22px;
+       border-bottom-right-radius: 22px;
+      border: none;
+      color: $white;
+      background-color: $color-accent;
+      font-size: 14px;
+      line-height: 17px;     
+      text-align: center;
+    }
+
+  }
+}

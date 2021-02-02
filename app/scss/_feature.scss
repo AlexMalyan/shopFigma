@@ -1,0 +1,27 @@
+.feature{
+  display: flex;
+  justify-content: space-between;
+  background: $black;
+  &__item{
+   max-width: 33,3333%;   
+    margin: $sp*4+10px 0;
+    text-align: center;
+    color:$white;
+  & h4{
+    font-size: 20px;
+    line-height: 24px;
+    margin: 20px 0 $sp 0;
+  }
+  & p{
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding: 0 $sp;
+    margin: 0;
+  }
+   &:nth-child(2){
+    margin: $sp*4+10px $sp*2;
+   }
+  }
+
+}
