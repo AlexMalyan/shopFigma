@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css/flexboxgrid.min.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Catalog</title>
+</head>
+
+<body>
+  <header class="header container">
+  <div class="header-block">
+    <img src="img/logo.png" alt="logo" class="logo">
+    <div class="icon-box">
+      <img src="img/icons/icons.svg#zoom-in" alt="search" class="header__search">
+    </div>
+  </div>
+  <div class="header-block">
+    <div class="header__burger icon-box">
+      <img src="img/icons/icons.svg#burger" alt="burger">
+    </div>
+    <div class="header__user icon-box">
+      <img src="img/icons/icons.svg#user" alt="user">
+    </div>
+    <div class="header__cart icon-box">
+      <img src="img/icons/icons.svg#cart" alt="cart">
+    </div>
+  </div>
+</header>
+  <!-- 
+  * breadcrumb
+ -->
+<div class="breadcrumb container">
+  <h1 class="breadcrumb__h1">NEW ARRIVALS  </h1>
+  <!-- TODO Оставил до следущего урока для разбора -->
+  <ul class="breadcrumb__list">
+    <li class="breadcrumb__item"><a href="#" class="breadcrumb__item-link">HOME</a></li>
+    <li class="breadcrumb__item"><a href="#" class="breadcrumb__item-link">MEN</a></li>
+    <li class="breadcrumb__item breadcrumb__item"><a href="#"
+        class="breadcrumb__item-link breadcrumb__item-link--active">NEW ARRIVALS </a>
+    </li>
+  </ul>
+</div>
+
+  <div class="filters container">
+    <div class="filters__filter">
+      <span class="filters__filter-title">filter</span>
+      <span>
+        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+            fill="black" />
+        </svg>
+      </span>
+    </div>
+    <div class="filters__sort">
+      <div class="filters__sort-item">
+        TRENDING NOW
+        <span>
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+              fill="#6F6E6E" />
+          </svg>
+        </span>
+      </div>
+      <div class="filters__sort-item">
+        SIZE
+        <span>
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+              fill="#6F6E6E" />
+          </svg>
+        </span>
+      </div>
+      <div class="filters__sort-item">
+        PRICE
+        <span>
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+              fill="#6F6E6E" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+  <section class="products container">
+    <div class="products__body">
+      <a href="#" class="card">
+  <img src="img/product1.jpg" alt="product-1" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product22.jpg" alt="product-22" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product3.jpg" alt="product-3" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product4.jpg" alt="product-4" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product55.jpg" alt="product-55" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product66.jpg" alt="product-66" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product7.jpg" alt="product-7" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product8.jpg" alt="product-8" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a><a href="#" class="card">
+  <img src="img/product9.jpg" alt="product-9" class="card__img">
+  <div class="card__body">
+    <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
+    <p class="card__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+      Ellery teams up with Moda Operandi.</p>
+    <span class="card__price">$52.00</span>
+  </div>
+
+</a>
+    </div>
+
+    <ul class="products__pagination">
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#"><svg width="9" height="14"
+            viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.99512 2L3.99512 7L8.99512 12L7.99512 14L0.995117 7L7.99512 0L8.99512 2Z" fill="black" />
+          </svg></a></li>
+      <li class="products__pagination-item">
+        <a class="products__pagination-link products__pagination-link--active" href="#">1</a>
+      </li>
+      <li class="products__pagination-item">
+        <a class="products__pagination-link" href="#">2</a>
+      </li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#">3</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#">4</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#">5</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#">6</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link products__pagination-link--dots"
+          href="#">.....</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#">20</a></li>
+      <li class="products__pagination-item"><a class="products__pagination-link" href="#"><svg width="9" height="14"
+            viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.994995 12L5.995 7L0.994995 2L1.995 0L8.995 7L1.995 14L0.994995 12Z" fill="black" />
+          </svg></a></li>
+    </ul>
+
+  </section>
+
+  <section class="feature container">
+    <div class="feature__item">
+  <img src="img/icons/icons.svg#driver" alt="driver" class="feature__item-icon" width="40px" height="40px">
+  <h4 class="feature__item-title">Free Delivery</h4>
+  <p class="feature__item-description">
+    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+  </p>
+</div><div class="feature__item">
+  <img src="img/icons/icons.svg#coupon" alt="coupon" class="feature__item-icon" width="40px" height="40px">
+  <h4 class="feature__item-title">Sales & discounts</h4>
+  <p class="feature__item-description">
+    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+  </p>
+</div><div class="feature__item">
+  <img src="img/icons/icons.svg#crown" alt="crown" class="feature__item-icon" width="40px" height="40px">
+  <h4 class="feature__item-title">Quality assurance</h4>
+  <p class="feature__item-description">
+    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+  </p>
+</div>
+
+  </section>
+  <section class="block container">
+    <div class="block__comments block__item--basis">
+      <img src="img/Intersect.jpg" alt="Intersect" class="block__img">
+      <q class="block__quote">
+        Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum
+      </q>
+    </div>
+    <div class="block__subscribe block__item--basis">
+      <h4 class="block__subscribe-title">
+        SUBSCRIBE
+      </h4>
+      <p class="block__subscribe-text">
+        FOR OUR NEWLETTER AND PROMOTION
+      </p>
+      <form class="subscribe" action="#">
+        <!-- TODO Не пойму почему текст выстроился по центру -->
+        <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
+        <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer class="copyright container">
+  <div class="copyright__rights">©&nbsp;2021 Brand All Rights Reserved.</div>
+  <ul class="copyright__socials">
+    <li class=" copyright__socials-item">
+      <div class="icon-box">
+        <img class="copyright__socials-img" src="img/icons/icons.svg#fb" alt="socials">
+      </div>
+    </li>
+    <li class=" copyright__socials-item">
+      <div class="icon-box">
+        <img class="copyright__socials-img" src="img/icons/icons.svg#inst" alt="socials">
+      </div>
+    </li>
+    <li class=" copyright__socials-item">
+      <div class="icon-box">
+        <img class="copyright__socials-img" src="img/icons/icons.svg#pin" alt="socials">
+      </div>
+    </li>
+    <li class="copyright__socials-item">
+      <div class="icon-box">
+        <img class="copyright__socials-img" src="img/icons/icons.svg#twitter" alt="socials">
+      </div>
+    </li>
+  </ul>
+</footer>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
