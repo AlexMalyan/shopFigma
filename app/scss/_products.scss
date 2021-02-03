@@ -26,6 +26,35 @@
   &__button{
     margin: $sp*3-20px auto $sp*6;
   }
+  &__pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 96px-20px 0 48px;
+    height: 44px;
+    line-height: 44px;
+    border: 1px #EBEBEB solid;
+    border-radius: 5px;
+    
+    &-item{
+      display: inline;
+      
+    }
+    &-link{
+      color: #C4C4C4;
+      float: left;
+      padding: 0px 10px;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 16px;
+      &--active{
+        color: $color-accent;
+      }
+      &--dots{
+        padding: 0;
+      }
+    }
+    
+  }
 }
 
 
@@ -59,12 +88,15 @@
       line-height: 19px;
       color: $color-accent;
     }
+    
 }
-.card__img {
-}
-.card__title {
-}
-.card__description {
-}
-.price {
-}
+
+
+// .card__img {
+// }
+// .card__title {
+// }
+// .card__description {
+// }
+// .price {
+// }

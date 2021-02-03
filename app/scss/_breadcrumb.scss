@@ -1,0 +1,45 @@
+.breadcrumb {
+  min-height: 148px;
+  background: #F8F3F4;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__h1 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 29px;
+    color: $color-accent;
+     
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+   
+  }
+
+  &__item {
+    
+    &:not(:last-child)::after{
+      content: '/';
+      padding: 0 5px ;
+      color: #636363;
+    }
+  }
+
+  &__item-link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+   
+    &--active {
+    color: $color-accent;
+    
+  }
+  }
+
+  
+}
+
