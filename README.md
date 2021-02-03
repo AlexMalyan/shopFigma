@@ -22,4 +22,35 @@
 ```
 npm gulp
   ```
+  ---
+  ## Работа с fileinclude
+  ---
+  ### loop statement + data.json (оператор цикла из файла)
+
+  data.json
+  > *не знаю как сделать многомерным чтобы не раздувать количество файлов*
+
+  ```
+  [
+  { "title": "My post title", "text": "<p>lorem ipsum...</p>" },
+  { "title": "Another post", "text": "<p>lorem ipsum...</p>" },
+  { "title": "One more post", "text": "<p>lorem ipsum...</p>" }
+]
+  ```
+  ### создаю файл loop-article.html
+
+  ```
+  <article>
+  <h1>@@title</h1>
+  @@text
+</article>
+  ```
+
+ ### Записываем в тело .html
+ ```
+ <body>
+  @@loop("loop-article.html", "data.json")
+</body>
+ ``` 
+ [gulp-file-include инструкция](https://www.npmjs.com/package/gulp-file-include/ "gulp-file-include")
 
