@@ -35,22 +35,22 @@
       font-size: 48px;
       font-style: bold;
       font-weight: 900;
-      line-height: 58px;
+      line-height: 44px;
     }
-    & p{
-      margin: 15px 0 0 0;
+    & span{
+      // margin: 15px 0 0 0;
       font-size: 32px;
       font-style: normal;
       font-weight: 700;
-      line-height: 38px;      
+      // line-height: 38px; 
+      &:nth-child(3){
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        // line-height: 44px;
+       color: $color-accent;        
+      }     
     }
-    & span{
-      font-size: 37px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 44px;
-     color: $color-accent;
-      
-    }
+    
   }
 }

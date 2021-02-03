@@ -9,49 +9,45 @@
 
   <div class="hero container ">
     <div class="hero__title">
-      <!-- TODO переделать главный тег -->
       <h1>
         THE BRAND
+        <br>
+        <span>OF LUXERIOUS</span> <span>FASHION</span>
       </h1>
-      <br>
-      <p>
-        OF LUXERIOUS <span>FASHION</span>
-      </p>
     </div>
   </div>
-  <div class="offer container">
-    <!-- TODO ссылками сделать -->
-    <div class="offer__for-men offer__item">
+  <section class="offer container">
+    <a href="#" class="offer__for-men offer__item">
       <img src=" img/for_men.jpg" alt="women">
       <div class="offer__title">
         <p>HOT DEAL</p>
         <h3> FOR MEN</h3>
       </div>
-    </div>
-    <div class="offer__for-women offer__item">
+    </a>
+    <a href="#" class="offer__for-women offer__item">
       <img src="img/for_woman.jpg" alt="men ">
       <div class="offer__title">
         <p> 30% OFF</p>
         <h3>FOR WOMEN</h3>
       </div>
-    </div>
-    <div class="offer__for-kids offer__item"><img src="img/for_kids.jpg" alt="kids">
+    </a>
+    <a class="offer__for-kids offer__item"><img src="img/for_kids.jpg" alt="kids">
       <div class="offer__title">
         <p>NEW ARRIVALS</p>
         <h3>FOR KIDS</h3>
       </div>
-    </div>
-    <div class="offer__accesories offer__item">
+    </a>
+    <a href="#" class="offer__accesories offer__item">
       <div class="offer__title">
         <p> LUXIROUS & TRENDY</p>
         <h3> ACCESORIES</h3>
       </div>
       <img src="img/ACCESORIES.jpg" alt="accesories">
 
-    </div>
-  </div>
+    </a>
+  </section>
 
-  <div class="products container">
+  <section class="products container">
     <div class="products__header">
       <h3>Fetured Items</h3>
       <p>Shop for items based on what we featured in this week</p>
@@ -68,17 +64,17 @@
     </div>
     <a href="" class="products__button button">Browse All Product</a>
 
-  </div>
+  </section>
 
-  <div class="feature container">
+  <section class="feature container">
     @@loop('_feature-item.html',[
     {"img":"driver", "title":"Free Delivery"},
     {"img":"coupon", "title":"Sales & discounts"},
     {"img":"crown", "title":"Quality assurance"},
     ])
 
-  </div>
-  <div class="block container">
+  </section>
+  <section class="block container">
     <div class="block__comments block__item--basis">
       <img src="img/Intersect.jpg" alt="Intersect" class="block__img">
       <q class="block__quote">
@@ -98,7 +94,7 @@
         <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
       </form>
     </div>
-  </div>
+  </section>
   @@include_once('_footer.html')
   <script src="js/script.min.js"></script>
 </body>

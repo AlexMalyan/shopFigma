@@ -95,22 +95,19 @@ body {
   font-size: 48px;
   font-style: bold;
   font-weight: 900;
-  line-height: 58px;
-}
-
-.hero__title p {
-  margin: 15px 0 0 0;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 38px;
+  line-height: 44px;
 }
 
 .hero__title span {
-  font-size: 37px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 44px;
+}
+
+.hero__title span:nth-child(3) {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
   color: #F16D7F;
 }
 
@@ -212,6 +209,7 @@ body {
   flex-shrink: 0;
   margin: 0;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .card__body {
@@ -224,6 +222,7 @@ body {
   margin: 0;
   font-size: 13px;
   line-height: 16px;
+  color: #222224;
 }
 
 .card__description {
@@ -280,7 +279,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 7px;
 }
 
 .block__item--basis {
