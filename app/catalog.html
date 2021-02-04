@@ -4,7 +4,10 @@
 
 <body>
   @@include('_header.html')
-  @@include_once('_breadcrumb.html', {"h1":"NEW ARRIVALS "})
+  @@include_once('_breadcrumb.html', {
+  "h1":"NEW ARRIVALS",
+  "arr": ['HOME', 'MEN', ]
+  })
 
   <div class="filters container">
     <div class="filters__filter">
