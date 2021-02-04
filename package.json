@@ -4,6 +4,7 @@
   "description": "EDUCATE PROJECT GULP",
   "main": "index.js",
   "scripts": {
+    "svg": "gulp svgSprite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MALAN.PROG",

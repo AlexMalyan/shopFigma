@@ -1,0 +1,97 @@
+// registraition page
+.register{
+display: flex; 
+flex-wrap: wrap;
+margin-top: $sp*4;
+margin-bottom: $sp*6;
+
+& input[type="text"], 
+input[type="email"],
+input[type="password"]{
+  width: 360px;
+  background: #FFFFFF;
+  font-weight: 300;
+font-size: 13px;
+line-height: 16px;
+color: #B1B1B1;
+padding: 15px;
+border: 1px solid #A4A4A4;
+margin-bottom: $sp+5px;
+}
+
+& input[type="radio"]{
+  // border: 1px solid #A4A4A4
+}
+&-button{
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  padding: $sp $sp*2;
+  color: #FFFFFF;
+  background: #F16D7F;
+  span{
+    margin-left: $sp+5px;
+  }
+
+}
+}
+.register-form {
+flex-basis: 50%;
+& fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+& fieldset:first-child{
+  margin-bottom: $sp*2;
+}
+&__legend{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: $sp+5px;
+  
+}
+  &__reristration {
+    
+  }
+
+  &__characters {
+    max-width: 360px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin-bottom: $sp*2+10px;
+  }
+}
+.register-loyalty {
+  flex-basis: 50%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  &__header {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__p {
+    
+
+  }
+
+  &__list {
+  }
+
+  &__item {
+    list-style-type: ' \2713'; 
+    padding-left: 10px;   
+    // TODO list-style-image  заменю на картинку предварительно установить list-style-type: none;
+   
+  }
+}
+
+
+// registraition page end

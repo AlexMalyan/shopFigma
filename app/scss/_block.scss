@@ -57,7 +57,12 @@
       font-size: 14px;
       line-height: 17px;
       color: $black;
-      opacity: 0.67;       
+      opacity: 0.67;
+      &:focus{
+          outline: none;
+          border: 1px solid $color-text;
+          border-right: none;       
+      }       
     }
     &-submit{
       width: 100px;
