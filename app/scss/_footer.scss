@@ -12,33 +12,30 @@ color: #FBFBFB;
     color: #FBFBFB; 
   }
 
-  &__socials {
+  &__social {
     display: flex;
     padding-left: 0px;
     margin-top: 0;
     margin-bottom: 0;
-    
-    & .icon-box{
-      border-spacing: 3px;
-        background-color: $white;
-        margin-right: $sp/2;
-    }
-    &-item{
-      list-style: none;
-      margin-right: $sp/2;
-      
       &:last-child{
         margin-right: 0px;
-      }
+      }    
+    &-link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 32px;
+      background-color:$white;
+      padding: 10px;
+      margin-right: $sp/2;
+      color: $black;
+      text-decoration: none;
+      font-size:16px;
+      &:hover{
+        color: $white;
+        background-color: $color-accent;
+      }  
     }
-    &-img {
-      width: 16px;
-      height: 16px;
-     
-      
     }
   }
-
-  
-}
-

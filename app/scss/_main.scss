@@ -1,0 +1,37 @@
+// MAIN UI
+* {
+  box-sizing: border-box;
+  /*margin: 0;
+  padding: 0;*/
+}
+body{
+  font-family: "Lato", $font-stack;
+  font-weight: normal;
+  background:$bgc;
+  line-height: 1.4rem;
+  margin: 0;
+}
+.container {
+  padding: 0 calc(50% - 1140px/ 2);
+}
+
+.icon-box {
+	// margin: 0;
+	width: 32px;
+	height: 32px;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.button{
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 16px;
+  line-height: 19px;
+  color:$color-accent;
+  text-decoration: none;
+
+  border: 1px solid $color-accent;
+}

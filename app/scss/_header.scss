@@ -15,7 +15,8 @@
   }       
     }
 .hero {
-  background: $bgc-hero;
+
+  background-color: $bgc-hero;
   background-image: url(../img/hero_man.jpg);
   background-position: left bottom; /* Положение фона */
   background-repeat: no-repeat; /* Отменяем повторение фона */
