@@ -318,6 +318,8 @@ body {
 }
 
 .block {
+  background: url("../img/photo_subscribe.jpg") no-repeat top center scroll #F1E4E6;
+  background-size: cover;
   min-height: 450px;
   display: flex;
   justify-content: space-between;
@@ -331,6 +333,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  z-index: 3;
 }
 
 .block__bg-video {
@@ -339,7 +342,7 @@ body {
      object-fit: cover;
   position: absolute;
   width: 100%;
-  z-index: -5;
+  z-index: 1;
 }
 
 .block__bg-video::before {

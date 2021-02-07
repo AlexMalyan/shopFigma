@@ -67,7 +67,7 @@ function html() {
   return src(path.src.html)
     .pipe(fileinclude({
       context: {
-        arr: ['HOME', 'MEN',]
+        arr: ['HOME', 'MEN']
       }
     }))
     .pipe(dest(path.build.html))

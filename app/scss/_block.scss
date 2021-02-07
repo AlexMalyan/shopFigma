@@ -1,5 +1,5 @@
 .block{
-  // @include cover-background("../img/photo_subscribe.jpg", top, center, scroll,$bgc-hero);  
+  @include cover-background("../img/photo_subscribe.jpg", top, center, scroll,$bgc-hero);  
   min-height: 450px;
   display: flex;
   justify-content: space-between;
@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
     margin: 0 auto;
+    z-index: 3;
   }
   &__bg {
     
@@ -21,7 +22,7 @@
     object-fit: cover;
     position: absolute;
     width: 100%;
-    z-index: -5;
+    z-index: 1;
     &::before{
       content: "";
       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><circle r="1" fill="%23888" /></svg>') repeat;  
