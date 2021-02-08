@@ -1,0 +1,159 @@
+.p-slider {
+  position: relative;
+min-width: 100%;
+min-height: 777px;
+background-color:  #F7F7F7;
+display: flex;
+justify-content: center;
+z-index: -1;
+
+// TODO сделать миксин для картинки отсюда https://proglib.io/p/responsive-images/
+  &__img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    /* еще больше контроля с max-width */
+    max-width: 597px;
+  }
+
+  &__arrow {
+display: inline-block;
+width: 47px;
+height: 47px;
+font-size: 47px;
+line-height: 47px;
+color: $black;
+text-align: center;
+background-color: rgba(#2A2A2A,  0.15);
+position: absolute;
+top: 50%;
+transform: translate(0, -50%);
+&:hover{
+  color: $color-accent;
+}
+  }
+
+  &__arrow-prev {
+    left: 0;
+  }
+
+  &__arrow-next {
+    right: 0;
+  }
+}
+// p-desc
+.p-desc {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ 
+ &-container{
+   background-color: $white;
+   width: 1140px;
+   margin: -33px auto $sp*8;
+   border: 1px solid #EAEAEA;
+   
+ } 
+
+  &__category {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: $sp*4 0 $sp*2;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    color: $color-accent;
+    &::after{
+      content: " ";
+      display: block;
+      width: 45%;
+      height: 3px;
+      margin-top: 12px;
+      background-color: $color-accent;
+      margin: 12px auto 0;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0 0 $sp*3;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #4D4D4D;
+  }
+
+  &__description {
+    max-width: 555px;
+    margin: 0 0 $sp*2;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    color: #5E5E5E;
+  }
+
+  &__price {
+    margin: $sp*2 0 $sp*4;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-accent;
+  }
+
+  &__hr {
+    display: block;
+    height: 2px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #EAEAEA;
+   
+  }
+
+  &__sort {
+    margin: $sp*4 0 $sp*3;
+    min-width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 212px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+    margin-bottom: $sp*4;
+    text-decoration:none;
+    background-image: linear-gradient(to left,transparent,transparent 50%,$color-accent 50%,$color-accent);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  font: 400 18px tahoma;
+  &:hover{
+    fill: $white;
+    color: $white;
+    background-position: 0 0;    
+  }
+  &:hover svg{
+    fill: $white;
+  }
+}
+  &__icon-cart {
+    width: 26px;
+    height: 24px;   
+    fill: $color-accent;
+    margin-right: 23px;
+    margin-left: 24px;
+    margin-bottom: -7px;
+    &:hover{
+      fill: $white;
+    }   
+  }
+}
+.product-offer{
+  margin: $sp*8 0;
+}
+/* Забрал стили для кнопки с http://wordsmall.ru/html-i-css/primery-stili-knopok-css.html 
+end .p-desc */
