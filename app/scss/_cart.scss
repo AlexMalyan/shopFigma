@@ -1,0 +1,198 @@
+.order{
+  margin-top: $sp*6;
+  margin-bottom: $sp*8;
+}
+.order-basket {
+
+&__close{
+  width: 18px;
+  height: 18px;
+  fill: #575757;
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  cursor: pointer;
+  &:hover{
+    fill:lighten($color-text, 8%); ;
+  }
+}
+  &__item {
+    display: flex;
+    min-width: 650px;
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+  }
+
+  &__item-img-wr {
+    max-width: 262px;
+  }
+
+  &__item-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    margin: 0 auto; 
+  }
+
+  &__item-content {
+    max-width: 40%;
+    margin: 22px auto auto 31px;
+  }
+
+  &__item-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    margin-bottom: 42px;
+  }
+
+  &__item-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 22px;
+    color: #575757
+  }
+
+  &__li {
+    margin-bottom: 6px;   
+  }
+
+  &__li--price {
+    color: $color-accent;
+  }
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+    border: 1px solid #A4A4A4;
+    padding: 17px 40px;
+    &:hover{
+      color: lighten($color-text, 8%);
+      border: 1px solid lighten(#A4A4A4, 10%);
+
+    }
+  }
+}
+
+// ORDER FORM
+.order-forms{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+.order-fom {
+  width: 360px;
+  min-height: 306px;
+  margin-bottom: 40px;
+  &__title {
+    text-align: left;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    margin: 0 0 20px;
+
+  }
+}
+.order-form {
+
+  &__input {
+    width: 360px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color:$black;
+
+    padding: 13px 17px;
+    border: 1px solid #A4A4A4;
+    margin: 0 0 20px 0;
+    &:hover{
+      color: #B1B1B1;
+      border: 1px solid #B1B1B1;
+    }
+    &:focus{
+      color: #B1B1B1; 
+    }    
+  }
+  &__submit{
+    text-transform: uppercase;
+    border: 1px solid #A4A4A4;
+    padding: 15px 10px;
+    background-color: transparent;
+    color: #4A4A4A;
+    cursor: pointer;
+    &:hover{
+      color: #B1B1B1;
+      border: 1px solid #B1B1B1;
+    }
+
+  }
+}
+// @include sep-h(80%,2px,blue);
+//   ORDER TOTAL
+.order-total {
+  width: 360px;
+  background: #F5F3F3;
+  text-align: right;
+  &__wr{
+    margin: 40px 40px;
+  }
+  &__sub {
+    font-size: 11px;
+    font-weight: 400;    
+  }
+
+  &__sub-sum {
+    margin-left: 25px;
+
+  }
+
+  &__grand {
+    margin: $sp 0 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__grand-sum {
+    margin-left: 25px;
+  }
+
+  &__hr {
+    @include sep-h(100%,1px,#E2E2E2);
+    margin-bottom: 17px+$sp;
+  }
+  &--accent{
+    color: $color-accent;
+    font-weight: 700;
+
+  }
+
+  &__button {
+    text-decoration: none;
+    padding: $sp 40px;
+    background: $color-accent;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    &:hover{
+      background-color: lighten($color-accent, 8%);
+    }
+
+  }
+}

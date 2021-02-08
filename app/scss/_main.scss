@@ -30,8 +30,66 @@ body{
   padding: 15px 40px;
   font-size: 16px;
   line-height: 19px;
-  color:$color-accent;
-  text-decoration: none;
-
+  color: $color-accent;
   border: 1px solid $color-accent;
+  margin-bottom: $sp*4;
+  text-decoration:none;
+  background-image: linear-gradient(to left,transparent,transparent 50%,$color-accent 50%,$color-accent);
+background-position: 100% 0;
+background-size: 200% 100%;
+transition: all .25s ease-in;
+font: 400 18px tahoma;
+&:hover{
+  fill: $white;
+  color: $white;
+  background-position: 0 0;    
+}
+&:hover svg{
+  fill: $white;
+}
+}
+
+.products-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+// END UI
+
+// GRID
+.wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.col{
+flex: 0 0 100%;
+max-width: 100%;
+position: relative;
+width: 100%;
+@include colpad;
+&-5{
+  flex-basis: 41.66666667%;
+  max-width: 41.66666667%;
+  @include colpad;
+}
+&-6{
+  flex: 0 0 50%;
+  max-width: 50%;
+  @include colpad;  
+}
+&-7{
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%;
+  @include colpad;
+}
 }

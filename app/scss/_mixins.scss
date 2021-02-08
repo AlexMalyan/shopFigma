@@ -201,3 +201,8 @@
 		border: 0;
 	}
 }
+// @include colpad;
+@mixin colpad{
+	padding-right: $sp;
+  padding-left: $sp;
+}

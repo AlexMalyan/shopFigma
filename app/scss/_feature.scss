@@ -4,7 +4,7 @@
   background: $black;
   &__item{
    max-width: 33,3333%;   
-    margin: $sp*4+10px 0;
+    margin: $sp*7 0;
     text-align: center;
     color:$white;
   & h4{
@@ -20,7 +20,7 @@
     margin: 0;
   }
    &:nth-child(2){
-    margin: $sp*4+10px $sp*2;
+    margin: $sp*7 $sp*2;
    }
   }
 

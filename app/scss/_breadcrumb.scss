@@ -34,6 +34,9 @@
     font-size: 14px;
     line-height: 17px;
     color: #636363;
+    &:hover{
+      color: lighten( $color-accent ,8%);
+    }
    
     &--active {
     color: $color-accent;

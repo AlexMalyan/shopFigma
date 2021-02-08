@@ -17,12 +17,7 @@
       color: #9F9F9F;       
     }
   }
-  &__body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-  }
+  
   &__button{
     margin: $sp*3-20px auto $sp*6;
   }

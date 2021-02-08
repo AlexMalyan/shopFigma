@@ -1,14 +1,16 @@
 [
   {
-    "title": "My post title",
-    "text": "<p>lorem ipsum...</p>"
+    "image": "product-4",
+    "title": "MANGO  PEOPLE  T-SHIRT",
+    "price": "$300",
+    "Color": "Red",
+    "Size": "Xl"
   },
   {
-    "title": "Another post",
-    "text": "<p>lorem ipsum...</p>"
-  },
-  {
-    "title": "One more post",
-    "text": "<p>lorem ipsum...</p>"
+    "image": "product-4",
+    "title": "MANGO  PEOPLE  T-SHIRT",
+    "price": "$300",
+    "Color": "Red",
+    "Size": "Xl"
   }
 ]

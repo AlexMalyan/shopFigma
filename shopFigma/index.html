@@ -11,65 +11,56 @@
 </head>
 
 <body>
-  <!-- <article>
-  <h1>My post title</h1>
-  <p>lorem ipsum...</p>
-</article><article>
-  <h1>Another post</h1>
-  <p>lorem ipsum...</p>
-</article><article>
-  <h1>One more post</h1>
-  <p>lorem ipsum...</p>
-</article> -->
   <header class="header container">
   <div class="header-block">
     <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
-    <div class="icon-box">
-      <img src="img/icons/icons.svg#zoom-in" alt="search" class="header__search">
-    </div>
+    <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
-    <div class="header__burger icon-box">
-      <img src="img/icons/icons.svg#burger" alt="burger">
-    </div>
-    <div class="header__user icon-box">
-      <img src="img/icons/icons.svg#user" alt="user">
-    </div>
-    <div class="header__cart icon-box">
-      <img src="img/icons/icons.svg#cart" alt="cart">
-    </div>
+    <img class="header__burger" src="img/icons/icons.svg#burger" width="29" height="29" alt="burger">
+    <img class="header__user " src="img/icons/icons.svg#user" width="29" height="29" alt="user">
+    <img class="header__cart" src="img/icons/icons.svg#cart" width="29" height="29" alt="cart">
+
   </div>
 </header>
-  <div class="hero container ">
-    <div class="hero__title">
-      <h1>
-        THE BRAND
-        <br>
-        <span>OF LUXERIOUS</span> <span>FASHION</span>
-      </h1>
+  <div class="hero">
+    <div class=" wrapper">
+      <div class="row">
+        <div class="col-6">
+          <img src="img/hero_man.png" alt="hero men" class="hero__img">
+        </div>
+        <div class="col-6 hero__title">
+          <div class=" hero__title-block">
+            <h1>
+              THE BRAND
+              <br>
+              <span>OF LUXERIOUS</span> <span>FASHION</span>
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <section class="offer container">
-    <a href="catalog.html" class="offer__for-men offer__item">
-      <img src=" img/for_men.jpg" alt="women">
-      <div class="offer__title">
-        <p>HOT DEAL</p>
-        <h3> FOR MEN</h3>
-      </div>
-    </a>
-    <a href="#" class="offer__for-women offer__item">
-      <img src="img/for_woman.jpg" alt="men ">
-      <div class="offer__title">
-        <p> 30% OFF</p>
-        <h3>FOR WOMEN</h3>
-      </div>
-    </a>
-    <a class="offer__for-kids offer__item"><img src="img/for_kids.jpg" alt="kids">
-      <div class="offer__title">
-        <p>NEW ARRIVALS</p>
-        <h3>FOR KIDS</h3>
-      </div>
-    </a>
+    <a href="catalog.html" class="offer__item">
+  <img src=" img/for_men.jpg" alt="women">
+  <div class="offer__title">
+    <p>HOT DEAL</p>
+    <h3> FOR MEN</h3>
+  </div>
+</a><a href="catalog.html" class="offer__item">
+  <img src=" img/for_woman.jpg" alt="women">
+  <div class="offer__title">
+    <p>30% OFF</p>
+    <h3> FOR WOMEN</h3>
+  </div>
+</a><a href="catalog.html" class="offer__item">
+  <img src=" img/for_kids.jpg" alt="women">
+  <div class="offer__title">
+    <p>NEW ARRIVALS</p>
+    <h3> FOR KIDS</h3>
+  </div>
+</a>
     <a href="#" class="offer__accesories offer__item">
       <div class="offer__title">
         <p> LUXIROUS & TRENDY</p>
@@ -79,14 +70,13 @@
 
     </a>
   </section>
-
   <section class="products container">
     <div class="products__header">
       <h3>Fetured Items</h3>
       <p>Shop for items based on what we featured in this week</p>
     </div>
-    <div class="products__body">
-      <a href="#" class="card">
+    <div class="products-body">
+      <a href="product.html" class="card">
   <img src="img/product1.jpg" alt="product-1" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -95,7 +85,7 @@
     <span class="card__price">$52.00</span>
   </div>
 
-</a><a href="#" class="card">
+</a><a href="product.html" class="card">
   <img src="img/product2.jpg" alt="product-2" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -104,7 +94,7 @@
     <span class="card__price">$52.00</span>
   </div>
 
-</a><a href="#" class="card">
+</a><a href="product.html" class="card">
   <img src="img/product3.jpg" alt="product-3" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -113,7 +103,7 @@
     <span class="card__price">$52.00</span>
   </div>
 
-</a><a href="#" class="card">
+</a><a href="product.html" class="card">
   <img src="img/product4.jpg" alt="product-4" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -122,7 +112,7 @@
     <span class="card__price">$52.00</span>
   </div>
 
-</a><a href="#" class="card">
+</a><a href="product.html" class="card">
   <img src="img/product5.jpg" alt="product-5" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -131,7 +121,7 @@
     <span class="card__price">$52.00</span>
   </div>
 
-</a><a href="#" class="card">
+</a><a href="product.html" class="card">
   <img src="img/product6.jpg" alt="product-6" class="card__img">
   <div class="card__body">
     <h4 class="card__title">ELLERY X M'O CAPSULE</h4>
@@ -142,25 +132,23 @@
 
 </a>
     </div>
-    <a href="" class="products__button button">Browse All Product</a>
-
+    <a href="catalog.html" class="products__button button">Browse All Product</a>
   </section>
-
   <section class="feature container">
     <div class="feature__item">
-  <img src="img/icons/icons.svg#driver" alt="driver" class="feature__item-icon" width="40px" height="40px">
+  <img src="img/icons/icons.svg#driver" alt="driver" class="feature__item-icon" width="40" height="40">
   <h4 class="feature__item-title">Free Delivery</h4>
   <p class="feature__item-description">
     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
   </p>
 </div><div class="feature__item">
-  <img src="img/icons/icons.svg#coupon" alt="coupon" class="feature__item-icon" width="40px" height="40px">
+  <img src="img/icons/icons.svg#coupon" alt="coupon" class="feature__item-icon" width="40" height="40">
   <h4 class="feature__item-title">Sales & discounts</h4>
   <p class="feature__item-description">
     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
   </p>
 </div><div class="feature__item">
-  <img src="img/icons/icons.svg#crown" alt="crown" class="feature__item-icon" width="40px" height="40px">
+  <img src="img/icons/icons.svg#crown" alt="crown" class="feature__item-icon" width="40" height="40">
   <h4 class="feature__item-title">Quality assurance</h4>
   <p class="feature__item-description">
     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
@@ -188,34 +176,36 @@
       </p>
       <form class="subscribe" action="#">
         <!-- TODO Не пойму почему текст выстроился по центру -->
-        <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
+        <input type="email" placeholder="Enter Your Email" class="block__subscribe-input">
         <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
       </form>
     </div>
   </div>
 </section>
-  <section class="block container">
-    <div class="block__comments block__item--basis">
-      <img src="img/Intersect.jpg" alt="Intersect" class="block__img">
-      <q class="block__quote">
-        Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum
-      </q>
-    </div>
-    <div class="block__subscribe block__item--basis">
-      <h4 class="block__subscribe-title">
-        SUBSCRIBE
-      </h4>
-      <p class="block__subscribe-text">
-        FOR OUR NEWLETTER AND PROMOTION
-      </p>
-      <form class="subscribe" action="#">
-        <!-- TODO Не пойму почему текст выстроился по центру -->
-        <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
-        <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
-      </form>
-    </div>
-  </section>
-  <footer class="copyright container">
+  <!-- FOOTER -->
+<section class="block container">
+  <div class="block__comments block__item--basis">
+    <img src="img/Intersect.jpg" alt="Intersect" class="block__img">
+    <q class="block__quote">
+      Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum
+    </q>
+  </div>
+  <div class="block__subscribe block__item--basis">
+    <h4 class="block__subscribe-title">
+      SUBSCRIBE
+    </h4>
+    <p class="block__subscribe-text">
+      FOR OUR NEWLETTER AND PROMOTION
+    </p>
+    <form class="subscribe" action="#">
+      <!-- TODO Не пойму почему текст выстроился по центру -->
+      <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
+      <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="copyright container">
   <div class="copyright__rights">©&nbsp;2021 Brand All Rights Reserved.</div>
   <div class="copyright__social">
     <a href="#" class="copyright__social-link">
@@ -232,6 +222,7 @@
     </a>
   </div>
 </footer>
+<!-- / FOOTER -->
   <script src="js/script.min.js"></script>
 </body>
 
