@@ -134,6 +134,13 @@ body {
   padding-left: 15px;
 }
 
+.products-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
 .header {
   min-height: 75px;
   background-color: #222224;
@@ -817,8 +824,30 @@ body {
   height: 48px;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   margin-bottom: 60px;
   padding: 0;
+=======
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
+  margin-bottom: 60px;
+  text-decoration: none;
+  background-image: linear-gradient(to left, transparent, transparent 50%, #F16D7F 50%, #F16D7F);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  font: 400 18px tahoma;
+}
+
+.p-desc__btn:hover {
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  background-position: 0 0;
+}
+
+.p-desc__btn:hover svg {
+  fill: #FFFFFF;
+>>>>>>> 95ffb50400caf87c43cf606292c5309a17ed319d
 }
 
 .p-desc__icon-cart {
@@ -839,6 +868,7 @@ body {
 }
 
 /* Забрал стили для кнопки с http://wordsmall.ru/html-i-css/primery-stili-knopok-css.html 
+<<<<<<< HEAD
 end .p-desc */
 
 .order {
@@ -1048,3 +1078,6 @@ end .p-desc */
 .order-total__button:hover {
   background-color: #f592a0;
 }
+=======
+end .p-desc */
+>>>>>>> 95ffb50400caf87c43cf606292c5309a17ed319d
