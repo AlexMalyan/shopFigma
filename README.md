@@ -52,5 +52,6 @@ npm gulp
   @@loop("loop-article.html", "data.json")
 </body>
  ``` 
+ сделана страница CART
  [gulp-file-include инструкция](https://www.npmjs.com/package/gulp-file-include/ "gulp-file-include")
 
