@@ -1,0 +1,100 @@
+.filter {
+  position: relative;
+  flex-basis:35%;
+  & details summary::-webkit-details-marker {
+    display: none
+  }
+  & details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  & details[open] summary ~ *{ 
+    animation: sweep .5s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  &__details{    
+    background-color: $white;
+		position: absolute;
+		width: 90%;
+    z-index: 1;    
+    &-summary{
+      display: block;
+    outline-style: none;  /* удалить обводку при фокусе */
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 16px 0 16px 16px;
+    @include transit(all,.2s,ease-out);
+    &:hover{
+      color: $color-accent;
+      fill:$color-accent;
+    }    
+  }
+  &-icon{
+    width: 15px;
+    height: 10px;
+    // fill: $c-grey;
+  }
+  } 
+}
+.filter__details[open] {
+  @include outline(#EBEBEB);
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+
+
+
+.filter {
+  &__details-drop {
+     
+  }
+  &__details-drop-content {
+    padding: 0 16px 16px 16px;
+    
+  }
+
+  &__details-drop-item {
+    
+  }
+
+  &__details-drop-header {
+    display: block;
+    border-left: 5px $color-accent solid;
+    padding-left: 16px;
+    border-bottom: 1px solid $c-line;
+    margin-bottom: 24px;
+    & h2{
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-accent;
+      padding: 11px 0 11px 11px;
+      margin: 0;
+    }
+    &:hover h2{
+      color: $hover-light-accent;
+    }
+  }
+  &__details-drop-body {
+    margin-bottom: 24px;
+    & ul{
+      list-style-type: none;
+      padding: 0;
+      color: $c-grey;
+      line-height: 27px;
+      & li{
+        padding-left: 33px;
+        @include transit(all,.2s,ease-in-out);
+      }
+      & li:hover{
+        color: $white;
+        background-color: $hover-light-accent;
+      }
+    }
+  }
+}
+
