@@ -10,8 +10,21 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    &__item{
+      width: 29px;
+      height: 29px;
+      fill: $white;
+      &--mg{
+        margin: 0 33px 0;
+      }  
+    }
     
   } 
+  &__link:hover svg{
+    fill: $color-accent;
+    animation: vibrate-1 0.3s linear both;
+  }
+
   &__search{
     margin-left: 41px;
   }    
@@ -19,6 +32,34 @@
     margin: 0 33px 0;
   }  
     }
+/**
+ * ----------------------------------------
+ * animation vibrate-1
+ * ----------------------------------------
+ */
+ @keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+
 .hero {
   background-color: $bgc-hero;
   // background-image: url(../img/hero_man.png);

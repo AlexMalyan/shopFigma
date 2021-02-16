@@ -24,6 +24,10 @@
     position: relative;
     margin-bottom: 40px;
     box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+    @include transit(box-shadow,.3s,ease-out);
+    &:hover{
+      box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.13);
+    }
   }
 
   &__item-img-wr {
@@ -190,6 +194,7 @@
     font-size: 16px;
     line-height: 19px;
     color: $white;
+    @include transit(background-color,.3s,ease-out);
     &:hover{
       background-color: lighten($color-accent, 8%);
     }

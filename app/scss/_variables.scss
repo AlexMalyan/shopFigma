@@ -6,14 +6,18 @@ $white:#FFFFFF;
 $bgc-hero:#F1E4E6;
 $color-text: #5D5D5D;
 $color-accent:#F16D7F;
+$c-grey:#6F6E6E;
 
 //FONTS
 $font-stack:  Arial, Helvetica, sans-serif;
 
 //SPACE
 $wrapper:1140px;
+$shift:50px;
 $sp:15px;
 
+//hover
+$hover-light-accent:lighten($color-accent, 8%)
 
 
 

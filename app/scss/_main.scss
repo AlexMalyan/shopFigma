@@ -32,7 +32,6 @@ body{
   line-height: 19px;
   color: $color-accent;
   border: 1px solid $color-accent;
-<<<<<<< HEAD
   margin-bottom: $sp*4;
   text-decoration:none;
   background-image: linear-gradient(to left,transparent,transparent 50%,$color-accent 50%,$color-accent);
@@ -48,17 +47,8 @@ font: 400 18px tahoma;
 &:hover svg{
   fill: $white;
 }
-=======
->>>>>>> 95ffb50400caf87c43cf606292c5309a17ed319d
 }
 
-.products-body{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: left;
-<<<<<<< HEAD
-}
 
 // END UI
 
@@ -81,6 +71,11 @@ max-width: 100%;
 position: relative;
 width: 100%;
 @include colpad;
+&-4{
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+  @include colpad;
+}
 &-5{
   flex-basis: 41.66666667%;
   max-width: 41.66666667%;
@@ -96,6 +91,4 @@ width: 100%;
   max-width: 58.33333333%;
   @include colpad;
 }
-=======
->>>>>>> 95ffb50400caf87c43cf606292c5309a17ed319d
 }

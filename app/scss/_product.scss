@@ -5,6 +5,7 @@ min-height: 777px;
 background-color:  #F7F7F7;
 display: flex;
 justify-content: center;
+padding-bottom: $shift;
 z-index: -1;
 
 // TODO сделать миксин для картинки отсюда https://proglib.io/p/responsive-images/
@@ -50,7 +51,7 @@ transform: translate(0, -50%);
  &-container{
    background-color: $white;
    width: 1140px;
-   margin: -33px auto $sp*8;
+   margin: -$shift auto $sp*8;
    border: 1px solid #EAEAEA;
    
  } 

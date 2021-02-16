@@ -1,0 +1,72 @@
+Анимация - https://animista.net/play/entrances/bounce-in/bounce-in-bck
+Меню выпадающее  - https://jsfiddle.net/korshunova_mk/vkdrjLh6/2/ 
+
+Больше крутых примеров Canvas:
+https://codepen.io/sol0mka/pen/Jsyxq, https://codepen.io/dissimulate/details/KrAwx, https://codepen.io/alexzaworski/pen/mEkvAG, https://codepen.io/jscottsmith/details/VjPaLO 
+
+крестик это кнопка
+subscribe подкрасить
+сдвиг посмотреть и доделать
+
+-------------------------------------------------------
+<svg class="icon">
+  <use xlink:href="#add-to-cart"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#arrow-right"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#burger"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#cart"></use>
+</svg><svg class="icon">
+  <use xlink:href="#close">
+  </use>
+</svg><svg class="icon">
+  <use xlink:href="#coupon"></use>
+</svg><svg class="icon">
+  <use xlink:href="#crown"></use>
+</svg><svg class="icon">
+  <use xlink:href="#down-arrow"></use>
+</svg><svg class="icon">
+  <use xlink:href="#driver"></use>
+</svg><svg class="icon">
+  <use xlink:href="#fb"></use>
+</svg><svg class="icon">
+  <use xlink:href="#filter"></use>
+</svg><svg class="icon">
+  <use xlink:href="#inst"></use>
+</svg><svg class="icon">
+  <use xlink:href="#next"></use>
+</svg><svg class="icon">
+  <use xlink:href="#pin"></use>
+</svg><svg class="icon">
+  <use xlink:href="#prev"></use>
+</svg><svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg><svg class="icon">
+  <use xlink:href="#user"></use>
+</svg><svg class="icon">
+  <use xlink:href="#zoom-in"></use>
+</svg>
+--------------------------------------------------------
+
+--------------------------------------------------------
+/ [
+//   {
+//     "image": "product-4",
+//     "title": "MANGO  PEOPLE  T-SHIRT",
+//     "price": "$300",
+//     "Color": "Red",
+//     "Size": "Xl"
+//   },
+//   {
+//     "image": "product-4",
+//     "title": "MANGO  PEOPLE  T-SHIRT",
+//     "price": "$300",
+//     "Color": "Red",
+//     "Size": "Xl"
+//   }
+// ]
+----------------------------------------------------------------------

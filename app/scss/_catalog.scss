@@ -1,24 +1,74 @@
 .filters {
 margin: 51px 0 64px;
 display: flex;
+z-index: 1;
 
-  &__filter {
-    flex-basis:35%;
-    &-title{
-      text-transform: uppercase;
-      margin-right: 11px;
-    }
-  }
+  
 
   &__sort {
   flex-basis: 30%;
     display: inline-flex;
     justify-content: space-between;
     &-item {
-      color: #6F6E6E; 
+      text-transform: uppercase;
+      color: $c-grey; 
+    }
+    &-icon{
+      width: 11px;
+      height: 6px;
+      fill: $c-grey;
     }
   }
 
   
 }
+.filter {
+  position: relative;
+  flex-basis:35%;
 
+  & details summary::-webkit-details-marker {
+    display: none
+  }
+  & summary{
+    color: $color-accent;    
+    & svg{
+      fill: $color-accent;
+    }
+  }
+
+  &__details{    
+    background-color: $white;
+		position: absolute;
+		width: 90%;
+    z-index: 1;
+    
+    &-summary{
+      display: block;
+    outline-style: none;  /* удалить обводку при фокусе */
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 16px 0 16px 16px;
+    
+  }
+  &-icon{
+    width: 15px;
+    height: 10px;
+    // fill: $c-grey;
+  }
+  } 
+}
+.filter__details[open] {
+  @include outline(#EBEBEB);
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+
+
+
+}
+.filter::-webkit-details-marker {
+  display: none;
+}
+.filter__details-drop{
+  &-content{
+    padding: 0 16px 16px 16px;
+  }
+}

@@ -32,6 +32,7 @@ color: #FBFBFB;
       color: $black;
       text-decoration: none;
       font-size:16px;
+      @include transit(all,.25s,ease-out);
       &:hover{
         color: $white;
         background-color: $color-accent;

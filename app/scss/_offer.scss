@@ -8,7 +8,12 @@ margin-top: $sp*4;
   flex-shrink: 0;
   margin: 0;
   margin-bottom: $sp*2;
+  overflow: hidden;
   position: relative;
+  
+  &:hover img{
+    transform: scale(1.2);
+  }
   &:after{    
     content: ' ';
     position: absolute;  
@@ -22,7 +27,8 @@ margin-top: $sp*4;
   }  
 }
 & img{
-  width: 100%;   
+  width: 100%; 
+  @include transit(all,.8s,ease-in-out);  
 }
 
 &__accesories {

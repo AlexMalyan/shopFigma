@@ -89,7 +89,7 @@
     &-submit{
       width: 100px;
       height: 49px;      
-      margin-left: -3px;
+      margin-left: -4px;
       border-top-right-radius: 22px;
        border-bottom-right-radius: 22px;
       border: none;
@@ -98,6 +98,10 @@
       font-size: 14px;
       line-height: 17px;     
       text-align: center;
+      @include transit(background-color,.2s,ease-in-out);
+      &:hover{
+        background-color: $hover-light-accent;
+      }
     }
 
   }

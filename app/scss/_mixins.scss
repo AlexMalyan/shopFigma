@@ -206,3 +206,7 @@
 	padding-right: $sp;
   padding-left: $sp;
 }
+// @include outline;
+@mixin outline ($color: red) {
+	outline: 1px solid $color;
+}

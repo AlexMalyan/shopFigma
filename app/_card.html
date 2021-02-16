@@ -1,6 +1,16 @@
 <!-- card -->
 <a href="@@link" class="card">
-  <img src="img/product@@img.jpg" alt="@@alt" class="card__img">
+  <div class="card__img">
+    <div class="card__overlay">
+      <button href="product.html" class="card__btn">
+        <svg class="card__icon">
+          <use xlink:href="img/icons/isprite.svg#add-to-cart"></use>
+        </svg>
+        Add to Cart
+      </button>
+    </div>
+    <img src="img/product@@img.jpg" alt="@@alt" class="card__img-img">
+  </div>
   <div class="card__body ">
     <h4 class="card__title">
       ELLERY X M'O CAPSULE

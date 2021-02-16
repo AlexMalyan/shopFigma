@@ -44,7 +44,7 @@
       <h3>Fetured Items</h3>
       <p>Shop for items based on what we featured in this week</p>
     </div>
-    <div class="products-body">
+    <div class="cards">
       @@loop('_card.html',[
       {"img": "1", "alt": "product-1", "link": "product.html"},
       {"img": "2", "alt": "product-2", "link": "product.html"},
@@ -57,11 +57,7 @@
     <a href="catalog.html" class="products__button button">Browse All Product</a>
   </section>
   <section class="feature container">
-    @@loop('_feature-item.html',[
-    {"img":"driver", "title":"Free Delivery"},
-    {"img":"coupon", "title":"Sales & discounts"},
-    {"img":"crown", "title":"Quality assurance"},
-    ])
+    @@loop("_feature-item.html", "feature.json")
 
   </section>
   @@include('_feedback-video.html')
