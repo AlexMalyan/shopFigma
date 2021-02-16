@@ -20,11 +20,20 @@
         </summary>
         <div class="filter__details-drop">
           <div class="filter__details-drop-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam porro dolorem
-            tempora,
-            quidem nulla officiis unde quisquam iusto autem voluptates praesentium modi quam! Soluta debitis quas,
-            numquam
-            ullam pariatur atque.
+            @@loop('catalog/_filterDropItem.html',[
+            {
+            "header": "category",
+            "open": "open"
+            },
+            {
+            "header": "BRAND",
+            "open": " "
+            },
+            {
+            "header": "DESIGNER",
+            "open": " "
+            },
+            ])
           </div>
         </div>
       </details>

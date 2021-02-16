@@ -25,6 +25,24 @@ body{
 	text-align: center;
 }
 
+.btn-clear{
+  font: inherit;
+  color: inherit;
+  border: solid 1px transparent;
+  background-color: transparent;
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+ }
+ /* инвертируем цвета при наведении и фокусе */
+// &:hover,
+// &:focus {
+//    color: #9555af;
+//    border-color: currentColor;
+//    background-color: white;
+// }
+}
+
 .button{
   display: inline-block;
   padding: 15px 40px;
@@ -54,7 +72,7 @@ font: 400 18px tahoma;
 
 // GRID
 .wrapper{
-  max-width: 1140px;
+  width: 1140px;
   margin: 0 auto;
 }
 .row {

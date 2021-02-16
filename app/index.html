@@ -13,14 +13,89 @@
           <div class="nav__menu-header">
             <h2>MENU</h2>
           </div>
-          ul
           <ul class="nav__menu-list">
-            <li class="nav__menu-item"><a href="#" class="nav__menu-link">qweqeqw</a></li>
-            <li class="nav__menu-item"><a href="#" class="nav__menu-link">qweqeqw</a></li>
-            <li class="nav__menu-item"><a href="#" class="nav__menu-link">qweqeqw</a></li>
-            <li class="nav__menu-item"><a href="#" class="nav__menu-link">qweqeqw</a></li>
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">
+                man
+              </a>
+              <ul class="nav__submenu-list">
+                @@loop('hero/_navLi.html',[
+                {"link": "#", "title": "Accessories" },
+                {
+                "link": "#",
+                "title": "Bags"
+                },
+                {
+                "link": "#",
+                "title": "Denim"
+                },
+                {
+                "link": "#",
+                "title": "T-Shirts"
+                },
+                ])
+              </ul>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">
+                woman</a>
+              <ul class="nav__submenu-list">
+                @@loop('hero/_navLi.html',[
+                {"link": "#", "title": "Accessories" },
+                {
+                "link": "#",
+                "title": "Jackets & Coats"
+                },
+                {
+                "link": "#",
+                "title": "Polos"
+                },
+                {
+                "link": "#",
+                "title": "T-Shirts"
+                },
+                {
+                "link": "#",
+                "title": "Shirts"
+                },
+                ])
+              </ul>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">KIDS </a>
+              <ul class="nav__submenu-list">
+                @@loop('hero/_navLi.html',[
+                {"link": "#", "title": "Accessories" },
+                {
+                "link": "#",
+                "title": "Jackets & Coats"
+                },
+                {
+                "link": "#",
+                "title": "Polos"
+                },
+                {
+                "link": "#",
+                "title": "T-Shirts"
+                },
+                {
+                "link": "#",
+                "title": "Shirts"
+                },
+                {
+                "link": "#",
+                "title": "Bags"
+                },
+                ])
+              </ul>
+            </li>
           </ul>
-          <button class="nav__menu-close btn">X</button>
+
+          <button class="nav__menu-close btn-clear">
+            <svg class="nav__menu-close-icon">
+              <use xlink:href="img/icons/isprite.svg#close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </nav>

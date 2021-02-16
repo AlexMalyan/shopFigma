@@ -1,11 +1,14 @@
-.header{
-  // min-width: 100%;  
-  min-height: 75px;
+.header{  
+  height: 75px;
   background-color: $black; 
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
+  
+  &__wrapper{
+    // position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+  }
   &-block{
     display: inline-flex;
     justify-content: space-between;
@@ -61,6 +64,7 @@
 
 
 .hero {
+  position: relative;
   background-color: $bgc-hero;
   // background-image: url(../img/hero_man.png);
   // background-position-x: 34%;

@@ -64,6 +64,15 @@
 		@include grad-l(aqua, gray);
 	}
 }
+// сброс стилей для button
+@mixin button-reset {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
 
 // скругление универсальное
 // пример: @include br(3px);
@@ -209,4 +218,16 @@
 // @include outline;
 @mixin outline ($color: red) {
 	outline: 1px solid $color;
+}
+
+// button mixin  @include button-bg(#2ecc71);
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
 }

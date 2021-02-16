@@ -11,31 +11,112 @@
 </head>
 
 <body>
-  <header class="header container">
-  <div class="header-block">
-    <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
-    <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
-  </div>
-  <div class="header-block">
-    <a href="catalog.html" class="header__link">
-      <svg class="header-block__item">
-        <use xlink:href="img/icons/isprite.svg#burger"></use>
-      </svg>
-    </a>
-    <a href="product.html" class="header__link">
-      <svg class="header-block__item header-block__item--mg">
-        <use xlink:href="img/icons/isprite.svg#user"></use>
-      </svg>
-    </a>
-    <a href="cart.html" class="header__link">
-      <svg class="header-block__item">
-        <use xlink:href="img/icons/isprite.svg#cart"></use>
-      </svg>
-    </a>
+  <header class="header">
+  <div class="wrapper header__wrapper">
+    <div class="header-block">
+      <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
+      <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
+    </div>
+    <div class="header-block">
+      <button class="header__link header__link--burger btn-clear">
+        <svg class="header-block__item">
+          <use xlink:href="img/icons/isprite.svg#burger"></use>
+        </svg>
+      </button>
+      <a href="product.html" class="header__link">
+        <svg class="header-block__item header-block__item--mg">
+          <use xlink:href="img/icons/isprite.svg#user"></use>
+        </svg>
+      </a>
+      <a href="cart.html" class="header__link">
+        <svg class="header-block__item">
+          <use xlink:href="img/icons/isprite.svg#cart"></use>
+        </svg>
+      </a>
+    </div>
 
   </div>
 </header>
   <div class="hero">
+    <nav class="nav">
+      <div class="nav-overlay">
+        <div class="nav__menu">
+          <div class="nav__menu-header">
+            <h2>MENU</h2>
+          </div>
+          <ul class="nav__menu-list">
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">
+                man
+              </a>
+              <ul class="nav__submenu-list">
+                <li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Accessories</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Bags</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Denim</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">T-Shirts</a>
+</li>
+              </ul>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">
+                woman</a>
+              <ul class="nav__submenu-list">
+                <li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Accessories</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Jackets & Coats</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Polos</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">T-Shirts</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Shirts</a>
+</li>
+              </ul>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="nav__menu-link">KIDS </a>
+              <ul class="nav__submenu-list">
+                <li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Accessories</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Jackets & Coats</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Polos</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">T-Shirts</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Shirts</a>
+</li><li class="nav__submenu-item">
+  <a href="#" class="nav__submenu-link">Bags</a>
+</li>
+              </ul>
+            </li>
+          </ul>
+
+          <button class="nav__menu-close btn-clear">
+            <svg class="nav__menu-close-icon">
+              <use xlink:href="img/icons/isprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.querySelector(".header__link--burger").onclick = function () {
+        document.querySelector(".nav-overlay").classList.add("overlay-open");
+      }
+
+      document.querySelector(".nav__menu-close").onclick = function () {
+        document.querySelector(".nav-overlay").classList.remove("overlay-open");
+      }
+    </script>
+
     <div class=" wrapper">
       <div class="row">
         <div class="col-6">
