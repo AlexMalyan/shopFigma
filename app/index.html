@@ -5,6 +5,7 @@
 })
 
 <body>
+  @@include('_iconsprite.html')
   @@include('_header.html')
   <div class="hero">
     <nav class="nav">
@@ -93,7 +94,7 @@
 
           <button class="nav__menu-close btn-clear">
             <svg class="nav__menu-close-icon">
-              <use xlink:href="img/icons/isprite.svg#close"></use>
+              <use xlink:href="#close"></use>
             </svg>
           </button>
         </div>
@@ -166,6 +167,7 @@
   @@include('_feedback-video.html')
   @@include('_footer.html')
   <script src="js/script.min.js"></script>
+
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 @@include('_head.html', {"title": "SHOP BRAND | Catalog"})
 
 <body>
+  @@include('_iconsprite.html')
   @@include('_header.html')
   @@include('_breadcrumb.html', {
   "h1":"NEW ARRIVALS",
@@ -15,7 +16,7 @@
         <summary class="filter__details-summary">
           filter
           <svg class="filter__details-icon">
-            <use xlink:href="img/icons/isprite.svg#filter"></use>
+            <use xlink:href="#filter"></use>
           </svg>
         </summary>
         <div class="filter__details-drop">
@@ -43,7 +44,7 @@
         TRENDING NOW
         <span>
           <svg class="filters__sort-icon">
-            <use xlink:href="img/icons/isprite.svg#down-arrow"></use>
+            <use xlink:href="#down-arrow"></use>
           </svg>
         </span>
       </div>
@@ -51,7 +52,7 @@
         SIZE
         <span>
           <svg class="filters__sort-icon">
-            <use xlink:href="img/icons/isprite.svg#down-arrow"></use>
+            <use xlink:href="#down-arrow"></use>
           </svg>
         </span>
       </div>
@@ -59,7 +60,7 @@
         PRICE
         <span>
           <svg class="filters__sort-icon">
-            <use xlink:href="img/icons/isprite.svg#down-arrow"></use>
+            <use xlink:href="#down-arrow"></use>
           </svg>
         </span>
       </div>

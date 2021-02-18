@@ -34,6 +34,8 @@ body{
     transform: translateY(1px);
     filter: saturate(150%);
  }
+
+ 
  /* инвертируем цвета при наведении и фокусе */
 // &:hover,
 // &:focus {
@@ -41,6 +43,13 @@ body{
 //    border-color: currentColor;
 //    background-color: white;
 // }
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
 }
 
 .button{

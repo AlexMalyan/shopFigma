@@ -72,6 +72,15 @@ body {
   filter: saturate(150%);
 }
 
+button:active,
+button:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
 .button {
   display: inline-block;
   padding: 15px 40px;
@@ -688,7 +697,8 @@ body {
 }
 
 .card__img-img {
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1230,13 +1240,16 @@ end .p-desc */
 }
 
 .order-basket__close {
-  width: 18px;
-  height: 18px;
-  fill: #575757;
   position: absolute;
   top: 28px;
   right: 22px;
   cursor: pointer;
+}
+
+.order-basket__close svg {
+  width: 18px;
+  height: 18px;
+  fill: #575757;
 }
 
 .order-basket__close:hover {
@@ -1293,6 +1306,19 @@ end .p-desc */
 
 .order-basket__li {
   margin-bottom: 6px;
+  /* Для Firefox */
+}
+
+.order-basket__li input[type=number]::-webkit-inner-spin-button,
+.order-basket__li input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.order-basket__li input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .order-basket__li--price {
@@ -1317,6 +1343,17 @@ end .p-desc */
 .order-basket__button:hover {
   color: #717171;
   border: 1px solid #bebebe;
+}
+
+.order-basket__qty {
+  width: 44px;
+  height: 25px;
+  border: 1px solid #EAEAEA;
+  margin-left: 24px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  color: #656565;
 }
 
 .order-forms {

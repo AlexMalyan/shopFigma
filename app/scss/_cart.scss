@@ -4,14 +4,16 @@
 }
 .order-basket {
 
-&__close{
-  width: 18px;
-  height: 18px;
-  fill: #575757;
+&__close{  
   position: absolute;
   top: 28px;
   right: 22px;
   cursor: pointer;
+  svg{    
+  width: 18px;
+  height: 18px;
+  fill: #575757;  
+  }
   &:hover{
     fill:lighten($color-text, 8%); ;
   }
@@ -64,7 +66,19 @@
   }
 
   &__li {
-    margin-bottom: 6px;   
+    margin-bottom: 6px;
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+    /* Для Firefox */
+    input[type=number]{
+      -moz-appearance: textfield;
+    }  
   }
 
   &__li--price {
@@ -88,7 +102,21 @@
 
     }
   }
+  &__qty{  
+   width: 44px;
+   height: 25px;
+   border: 1px solid #EAEAEA;
+   margin-left: 24px;
+   text-align: center;
+   font-size: 18px;
+   line-height: 22px;
+    color: #656565;
+  }
+
 }
+
+
+
 
 // ORDER FORM
 .order-forms{
