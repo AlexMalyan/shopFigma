@@ -156,16 +156,88 @@ button::-moz-focus-inner {
   padding-left: 15px;
 }
 
-.header {
-  height: 75px;
-  background-color: #222224;
+/* для элемента input c type="radio" */
+
+.input-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.header__wrapper {
-  height: 100%;
+/* для элемента label связанного с .input-radio */
+
+.input-radio + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+
+.input-radio + label::before {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на радио */
+
+.input-radio:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #f592a0;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+
+.input-radio:not(:disabled):active + label::before {
+  background-color: #f592a0;
+  border-color: #f592a0;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+
+.input-radio:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(241, 109, 127, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+
+.input-radio:focus:not(:checked) + label::before {
+  border-color: #f38493;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+
+.input-radio:checked + label::before {
+  border-color: #ed485e;
+  background-color: #ed485e;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+
+.input-radio:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 75px;
+  background-color: #222224;
 }
 
 .header-block {
@@ -257,7 +329,6 @@ button::-moz-focus-inner {
 }
 
 .hero {
-  position: relative;
   background-color: #F1E4E6;
   background-repeat: no-repeat;
   /* Отменяем повторение фона */
@@ -307,15 +378,19 @@ button::-moz-focus-inner {
   color: #F16D7F;
 }
 
-.nav {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
+.menu {
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  width: 100%;
+  top: 75px;
+  left: 0px;
+  right: 0px;
+  min-height: 100vh;
+  justify-content: flex-end;
+  display: none;
+  z-index: 10;
 }
 
-.nav__menu {
+.menu__nav {
   background-color: #FFFFFF;
   min-width: 232px;
   padding: 24px 0 20px 33px;
@@ -323,17 +398,24 @@ button::-moz-focus-inner {
   box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.nav__menu ul {
+.menu__nav ul {
   list-style-type: none;
 }
 
-.nav__menu-header {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
+.menu__nav a {
+  transition: all 0.2s ease-in-out;
 }
 
-.nav__menu-link {
+.menu__nav a:hover {
+  color: #f592a0;
+}
+
+.menu__nav-header {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.menu__nav-link {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
@@ -341,48 +423,39 @@ button::-moz-focus-inner {
   color: #F16D7F;
 }
 
-.nav__menu-close {
+.menu__nav-submenu-list {
+  padding-left: 20px;
+}
+
+.menu__nav-submenu-link {
+  text-decoration: none;
+  color: #6F6E6E;
+  line-height: 34px;
+}
+
+.menu__nav-close {
   position: absolute;
   right: 10px;
   top: 10px;
   border: solid 1px transparent;
 }
 
-.nav__menu-close svg {
+.menu__nav-close svg {
   transition: all 0.5s ease-in-out;
 }
 
-.nav__menu-close:hover svg {
+.menu__nav-close:hover svg {
   transform: rotate(45deg);
 }
 
-.nav__menu-close-icon {
+.menu__nav-close-icon {
   width: 12px;
   height: 12px;
   fill: #6F6E6E;
   cursor: pointer;
 }
 
-.nav__submenu-list {
-  padding-left: 20px;
-}
-
-.nav__submenu-link {
-  text-decoration: none;
-  color: #6F6E6E;
-  line-height: 34px;
-}
-
-.nav-overlay {
-  height: 300px;
-  justify-content: flex-end;
-  width: 100%;
-  height: 100%;
-  background-color: #222224d6;
-  display: none;
-}
-
-.overlay-open {
+.menu--open {
   display: flex;
 }
 
@@ -438,7 +511,6 @@ button::-moz-focus-inner {
   /* удалить обводку при фокусе */
   cursor: pointer;
   text-transform: uppercase;
-  padding: 16px 0 16px 16px;
   transition: all 0.2s ease-out;
 }
 
@@ -455,6 +527,8 @@ button::-moz-focus-inner {
 .filter__details[open] {
   outline: 1px solid #EBEBEB;
   box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  padding-top: 11px;
+  margin-top: -9px;
 }
 
 .filter__details-drop-content {
@@ -477,7 +551,7 @@ button::-moz-focus-inner {
   line-height: 17px;
   color: #F16D7F;
   padding: 11px 0 11px 11px;
-  margin: 0;
+  margin: 24px 0 0 0;
 }
 
 .filter__details-drop-header:hover h2 {
@@ -985,21 +1059,126 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
-.filters__sort {
+.sort {
   flex-basis: 30%;
   display: inline-flex;
   justify-content: space-between;
 }
 
-.filters__sort-item {
+.sort__item {
   text-transform: uppercase;
   color: #6F6E6E;
+  position: relative;
 }
 
-.filters__sort-icon {
+.sort__check {
+  display: none;
+}
+
+.sort-label {
+  text-transform: uppercase;
+  color: #6F6E6E;
+  margin-right: 9px;
+}
+
+.sort__icon {
   width: 11px;
   height: 6px;
   fill: #6F6E6E;
+}
+
+.sort__drop {
+  position: absolute;
+  min-width: 79px;
+  min-height: 103px;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  z-index: 10;
+  margin-top: 10px;
+  /* стили для активного чекбокса (при нажатии на него) */
+  /* стили для чекбокса, находящегося в фокусе */
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */
+}
+
+.sort__drop-check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.sort__drop-check + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sort__drop-check + label::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #6F6E6E;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.sort__drop-check:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #F16D7F;
+}
+
+.sort__drop-check:not(:disabled):active + label::before {
+  background-color: #F16D7F;
+  border-color: #F16D7F;
+}
+
+.sort__drop-check:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(241, 109, 127, 0.25);
+}
+
+.sort__drop-check:focus:not(:checked) + label::before {
+  border-color: #f592a0;
+}
+
+.sort__drop-check:checked + label::before {
+  border-color: #f592a0;
+  background-color: #f592a0;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.sort__drop-check:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.sort__drop-item {
+  padding: 6px 0px 6px 11px;
+  min-width: 100%;
+}
+
+.sort__drop-item:last-child {
+  margin-bottom: 11px;
+}
+
+.sort__check:checked ~ .sort__drop {
+  display: flex;
+}
+
+.sort__check:not(:checked) ~ .sort__drop {
+  display: none;
+}
+
+#sort-1:checked ~ .overlay {
+  display: flex;
 }
 
 .register {
@@ -1031,10 +1210,15 @@ button::-moz-focus-inner {
   padding: 15px 30px;
   color: #FFFFFF;
   background: #F16D7F;
+  transition: all .2s ease-out;
 }
 
 .register-button span {
   margin-left: 20px;
+}
+
+.register-button:hover {
+  background-color: #f592a0;
 }
 
 .register-form {
@@ -1067,6 +1251,18 @@ button::-moz-focus-inner {
   margin-bottom: 40px;
 }
 
+.register-form__inner {
+  max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-form__input {
+  margin-right: 20px;
+  font-weight: 300;
+  font-size: 11px;
+}
+
 .register-loyalty {
   flex-basis: 50%;
   font-style: normal;
@@ -1093,7 +1289,6 @@ button::-moz-focus-inner {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
-  z-index: -1;
 }
 
 .p-slider__img {
@@ -1117,10 +1312,13 @@ button::-moz-focus-inner {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
 }
 
 .p-slider__arrow:hover {
   color: #F16D7F;
+  background-color: rgba(42, 42, 42, 0.1);
 }
 
 .p-slider__arrow-prev {
@@ -1132,6 +1330,7 @@ button::-moz-focus-inner {
 }
 
 .p-desc {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

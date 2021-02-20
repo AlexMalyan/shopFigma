@@ -6,7 +6,8 @@ background-color:  #F7F7F7;
 display: flex;
 justify-content: center;
 padding-bottom: $shift;
-z-index: -1;
+
+
 
 // TODO сделать миксин для картинки отсюда https://proglib.io/p/responsive-images/
   &__img {
@@ -29,13 +30,18 @@ background-color: rgba(#2A2A2A,  0.15);
 position: absolute;
 top: 50%;
 transform: translate(0, -50%);
-&:hover{
+@include transit(all,.2s,ease-in-out);
+z-index: 5;
+&:hover {
   color: $color-accent;
+  background-color: rgba(#2A2A2A,  0.1);
+ 
 }
   }
 
   &__arrow-prev {
     left: 0;
+    
   }
 
   &__arrow-next {
@@ -44,6 +50,7 @@ transform: translate(0, -50%);
 }
 // p-desc
 .p-desc {
+  position: relative;
  display: flex;
  flex-direction: column;
  align-items: center;

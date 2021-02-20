@@ -8,109 +8,6 @@
   @@include('_iconsprite.html')
   @@include('_header.html')
   <div class="hero">
-    <nav class="nav">
-      <div class="nav-overlay">
-        <div class="nav__menu">
-          <div class="nav__menu-header">
-            <h2>MENU</h2>
-          </div>
-          <ul class="nav__menu-list">
-            <li class="nav__menu-item">
-              <a href="#" class="nav__menu-link">
-                man
-              </a>
-              <ul class="nav__submenu-list">
-                @@loop('hero/_navLi.html',[
-                {"link": "#", "title": "Accessories" },
-                {
-                "link": "#",
-                "title": "Bags"
-                },
-                {
-                "link": "#",
-                "title": "Denim"
-                },
-                {
-                "link": "#",
-                "title": "T-Shirts"
-                },
-                ])
-              </ul>
-            </li>
-            <li class="nav__menu-item">
-              <a href="#" class="nav__menu-link">
-                woman</a>
-              <ul class="nav__submenu-list">
-                @@loop('hero/_navLi.html',[
-                {"link": "#", "title": "Accessories" },
-                {
-                "link": "#",
-                "title": "Jackets & Coats"
-                },
-                {
-                "link": "#",
-                "title": "Polos"
-                },
-                {
-                "link": "#",
-                "title": "T-Shirts"
-                },
-                {
-                "link": "#",
-                "title": "Shirts"
-                },
-                ])
-              </ul>
-            </li>
-            <li class="nav__menu-item">
-              <a href="#" class="nav__menu-link">KIDS </a>
-              <ul class="nav__submenu-list">
-                @@loop('hero/_navLi.html',[
-                {"link": "#", "title": "Accessories" },
-                {
-                "link": "#",
-                "title": "Jackets & Coats"
-                },
-                {
-                "link": "#",
-                "title": "Polos"
-                },
-                {
-                "link": "#",
-                "title": "T-Shirts"
-                },
-                {
-                "link": "#",
-                "title": "Shirts"
-                },
-                {
-                "link": "#",
-                "title": "Bags"
-                },
-                ])
-              </ul>
-            </li>
-          </ul>
-
-          <button class="nav__menu-close btn-clear">
-            <svg class="nav__menu-close-icon">
-              <use xlink:href="#close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <script>
-      document.querySelector(".header__link--burger").onclick = function () {
-        document.querySelector(".nav-overlay").classList.add("overlay-open");
-      }
-
-      document.querySelector(".nav__menu-close").onclick = function () {
-        document.querySelector(".nav-overlay").classList.remove("overlay-open");
-      }
-    </script>
-
     <div class=" wrapper">
       <div class="row">
         <div class="col-6">
@@ -164,7 +61,7 @@
     @@loop("_feature-item.html", "feature.json")
 
   </section>
-  @@include('_feedback-video.html')
+  <!-- @@include('_feedback-video.html') -->
   @@include('_footer.html')
   <script src="js/script.min.js"></script>
 

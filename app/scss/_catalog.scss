@@ -3,22 +3,120 @@ margin: 51px 0 64px;
 display: flex;
 z-index: 1;
 
-  
+}
 
-  &__sort {
+  .sort {
   flex-basis: 30%;
     display: inline-flex;
     justify-content: space-between;
-    &-item {
+    
+    &__item{
+     text-transform: uppercase;
+     color: $c-grey;
+     
+      position: relative; 
+    }
+    &__check{
+      display: none;
+    }
+    &-label {
       text-transform: uppercase;
       color: $c-grey; 
+      margin-right: 9px;
     }
-    &-icon{
+    &__icon{
       width: 11px;
       height: 6px;
       fill: $c-grey;
     }
+    &__drop {
+			position: absolute;
+      min-width: 79px;
+      min-height: 103px;      
+      flex-direction: column;
+			background-color: $white;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      z-index: 10;
+      margin-top: 10px;
+      &-check{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+      &-check+label{
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+      }
+      &-check+label::before {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $c-grey;
+        border-radius: 0.15em;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+      &-check:not(:disabled):not(:checked)+label:hover::before {
+        border-color: $color-accent;
+      }
+  
+      /* стили для активного чекбокса (при нажатии на него) */
+      &-check:not(:disabled):active+label::before {
+        background-color: $color-accent;
+        border-color: $color-accent;
+      }
+  
+      /* стили для чекбокса, находящегося в фокусе */
+      &-check:focus+label::before {
+        box-shadow: 0 0 0 0.2rem rgba($color-accent , 0.25);
+      }
+  
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      &-check:focus:not(:checked)+label::before {
+        border-color: $hover-light-accent;
+      }
+  
+      /* стили для чекбокса, находящегося в состоянии checked */
+      &-check:checked+label::before {
+        border-color: lighten($color-accent, 8%);
+        background-color: lighten($color-accent, 8%);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+  
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      &-check:disabled+label::before {
+        background-color: #e9ecef;
+      }
+  
+
+      // -----end check--------------
+      &-item{
+        padding: 6px 0px 6px 11px;
+        min-width: 100%;
+        &:last-child{
+          margin-bottom: 11px;
+        }
+      }
+		}		
+	}
+  .sort__check:checked ~ .sort__drop {
+		display: flex;
+	}
+	.sort__check:not(:checked) ~ .sort__drop {
+		display: none;
   }
+	
+	
+  
 
   
+
+#sort-1:checked ~ .overlay {
+  display: flex;
 }

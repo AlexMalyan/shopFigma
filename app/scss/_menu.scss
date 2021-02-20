@@ -1,0 +1,89 @@
+.menu {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  // position: fixed;
+  top: 75px;
+  left:0px;
+  right: 0px;
+  min-height: 100vh;
+  justify-content: flex-end;
+  
+  display: none;
+  z-index: 10;
+  &__nav {
+    background-color: $white;
+    min-width: 232px;
+    padding: 24px 0 20px 33px;
+    position: relative;
+    box-shadow: 0 15px 10px 0 rgba(0,0,0,0.2); 
+    & ul{list-style-type: none;}
+    & a{@include transit(all,.2s,ease-in-out);
+&:hover{
+  color: $hover-light-accent;
+}
+    }
+  }
+
+  &__nav-header {
+    font-weight: 700;
+    font-size: 14px;
+    
+  }
+
+  &__nav-list {
+  }
+
+  &__nav-link:hover
+  &__nav-submenu-link:hover {
+    
+  }
+
+  &__nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-accent;
+  }
+
+  &__nav-submenu-list {
+    padding-left: 20px;
+  }
+  &__nav-submenu-item{
+  
+  }
+  &__nav-submenu-link{
+    text-decoration: none;
+    color: $c-grey;
+    line-height: 34px;
+  }
+
+  &__nav-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: solid 1px transparent;
+    & svg{
+      @include transit(all,.5s,ease-in-out);
+    }
+    
+    &:hover svg{
+      transform: rotate(45deg);
+    }
+    &-icon {
+      width: 12px;
+      height: 12px;
+      fill: $c-grey;
+      cursor: pointer;
+      
+    }
+  }
+
+  &__nav-close-icon {
+  }
+  &--open{
+    display: flex;
+  }
+}
+.btn-clear {
+}

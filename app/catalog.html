@@ -39,31 +39,23 @@
         </div>
       </details>
     </div>
-    <div class="filters__sort">
-      <div class="filters__sort-item">
-        TRENDING NOW
-        <span>
-          <svg class="filters__sort-icon">
-            <use xlink:href="#down-arrow"></use>
-          </svg>
-        </span>
-      </div>
-      <div class="filters__sort-item">
-        SIZE
-        <span>
-          <svg class="filters__sort-icon">
-            <use xlink:href="#down-arrow"></use>
-          </svg>
-        </span>
-      </div>
-      <div class="filters__sort-item">
-        PRICE
-        <span>
-          <svg class="filters__sort-icon">
-            <use xlink:href="#down-arrow"></use>
-          </svg>
-        </span>
-      </div>
+
+    <div class="sort">
+      @@loop('catalog/_sortItem.html',[
+      {
+      "title": "TRENDING NOW",
+      "id-label":"tr"
+      },
+      {
+      "title": "size",
+      "id-label":"sz"
+      },
+      {
+      "title": "price",
+      "id-label":"pr"
+      },
+
+      ])
     </div>
   </div>
   <section class="products container">

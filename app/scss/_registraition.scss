@@ -26,10 +26,13 @@ margin-bottom: $sp+5px;
   padding: $sp $sp*2;
   color: #FFFFFF;
   background: #F16D7F;
+  transition: all .2s ease-out;
   span{
     margin-left: $sp+5px;
   }
-
+  &:hover{
+    background-color: $hover-light-accent;
+  }
 }
 }
 .register-form {
@@ -58,6 +61,17 @@ flex-basis: 50%;
     color: #B1B1B1;
     margin-bottom: $sp*2+10px;
   }
+  &__inner{
+    max-width: 360px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input{
+    margin-right: 20px;
+    font-weight: 300;
+    font-size: 11px;
+
+  }
 }
 .register-loyalty {
   flex-basis: 50%;
@@ -75,6 +89,7 @@ flex-basis: 50%;
     // TODO list-style-image  заменю на картинку предварительно установить list-style-type: none;
    
   }
+ 
 }
 
 

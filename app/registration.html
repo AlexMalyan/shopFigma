@@ -3,6 +3,7 @@
 @@include('_head.html', {"title": "Brand | Registration"})
 
 <body>
+  @@include('_iconsprite.html')
   @@include_once('_header.html')
   @@include('_breadcrumb.html', {
   "h1":"Registration"
@@ -17,8 +18,20 @@
           <input type="text" placeholder="First Name"><br>
           <input type="text" placeholder="Last name"><br>
           <!-- TODO доработать кнопки -->
-          <input type="radio" name="male" value="Male"> Male
-          <input type="radio" name="female" value="Male"> Female
+          <div class="register-form__inner">
+            <div class="register__form-input">
+              <input id="male" class="input-radio register-form__radio" type="radio" name="male" value="rm">
+              <label for="male">Male</label>
+            </div>
+            <div class="register__form-input">
+              <input id="rfm" class="input-radio register-form__radio" type="radio" name="male" value="rfm">
+              <label for="rfm">Female</label>
+            </div>
+            <div class="register__form-input">
+              <input id="roth" class="input-radio register-form__radio" type="radio" name="male" value="roth">
+              <label for="roth"> Other</label>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="register-form__fieldset">

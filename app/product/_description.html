@@ -17,30 +17,20 @@
   <div class="p-desc__hr"></div>
 
   <div class="p-desc__sort">
-    <div class="filters__sort-item">
-      CHOOSE COLOR
-      <span>
-        <svg class="filters__sort-icon">
-          <use xlink:href="#down-arrow"></use>
-        </svg>
-      </span>
-    </div>
-    <div class="filters__sort-item">
-      CHOOSE SIZE
-      <span>
-        <svg class="filters__sort-icon">
-          <use xlink:href="#down-arrow"></use>
-        </svg>
-      </span>
-    </div>
-    <div class="filters__sort-item">
-      QUANTITY
-      <span>
-        <svg class="filters__sort-icon">
-          <use xlink:href="#down-arrow"></use>
-        </svg>
-      </span>
-    </div>
+    @@loop('../catalog/_sortItem.html',[
+    {
+    "title": "CHOOSE COLOR",
+    "id-label":"cc"
+    },
+    {
+    "title": "CHOOSE SIZE ",
+    "id-label":"chs"
+    },
+    {
+    "title": "QUANTITY",
+    "id-label":"qty"
+    },
+    ])
   </div>
   <a href="cart.html" class="p-desc__btn button">
     <svg class="p-desc__icon-cart">
