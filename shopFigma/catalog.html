@@ -106,17 +106,17 @@
     <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
-    <button id="icon-burger" class="header__link header__link--burger btn-clear">
+    <button id="icon-burger" class="header__burger header__link header__link--burger btn-clear">
       <svg class="header-block__item">
         <use xlink:href="#burger"></use>
       </svg>
     </button>
-    <a href="registration.html" class="header__link">
+    <a href="registration.html" class="header__user header__link">
       <svg class="header-block__item header-block__item--mg">
         <use xlink:href="#user"></use>
       </svg>
     </a>
-    <a href="cart.html" class="header__link">
+    <a href="cart.html" class="header__cart header__link">
       <svg class="header-block__item">
         <use xlink:href="#cart"></use>
       </svg>
@@ -211,7 +211,8 @@
       <details class="filter__details">
         <!-- только с  display: block; ,будет работать в fireFox-->
         <summary class="filter__details-summary">
-          filter
+          <span class="filter__details-header">filter</span>
+
           <svg class="filter__details-icon">
             <use xlink:href="#filter"></use>
           </svg>
@@ -724,7 +725,7 @@
     <p class="block__subscribe-text">
       FOR OUR NEWLETTER AND PROMOTION
     </p>
-    <form class="subscribe" action="#">
+    <form class="block__subscribe-form" action="#">
       <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
       <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
     </form>
@@ -749,6 +750,8 @@
   </div>
 </footer>
 <!-- / FOOTER -->
+  <!-- Inside the head -->
+  <script src="//cdn.jsdelivr.net/npm/details-polyfill@1.1.0/index.min.js" async></script>
   <script src="js/script.min.js"></script>
 </body>
 

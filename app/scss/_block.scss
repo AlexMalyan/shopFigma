@@ -5,6 +5,12 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media (max-width: 375px){
+    @include cover-background("../img/photo_subscribe_mobile.jpg", top, center,scroll,$bgc-hero);
+    flex-direction: column;
+    min-height: 550px;
+    justify-content: space-around; 
+  }
   &-content{
     width: 1140px;
     display: flex;
@@ -13,10 +19,7 @@
     margin: 0 auto;
     z-index: 3;
   }
-  &__bg {
-    
-    
-  }
+  
   &__bg-video{    
     height: 450px;    
     object-fit: cover;
@@ -47,6 +50,9 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    @media (max-width: 375px){
+      font-size: 18px;
+    }
   }
   &__subscribe-title{
     font-weight: bold;
@@ -60,14 +66,21 @@
   &__subscribe-text{
     margin: $sp auto $sp*2;
     text-transform: uppercase;
-
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     text-align: center;
+    @media (max-width: 375px){
+      font-size: 14px;
+    }
   }
   // &__comments{  }
   &__subscribe{
+    &-form{
+      width: 95%;
+      display: flex;
+    }
+    
     &-input {
        border: none;
        background: #E1E1E1;
@@ -98,6 +111,7 @@
       font-size: 14px;
       line-height: 17px;     
       text-align: center;
+      z-index: 1;
       @include transit(background-color,.2s,ease-in-out);
       &:hover{
         background-color: $hover-light-accent;

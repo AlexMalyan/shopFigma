@@ -14,7 +14,8 @@
       <details class="filter__details">
         <!-- только с  display: block; ,будет работать в fireFox-->
         <summary class="filter__details-summary">
-          filter
+          <span class="filter__details-header">filter</span>
+
           <svg class="filter__details-icon">
             <use xlink:href="#filter"></use>
           </svg>
@@ -96,6 +97,8 @@
 
   </section>
   @@include('_footer.html')
+  <!-- Inside the head -->
+  <script src="//cdn.jsdelivr.net/npm/details-polyfill@1.1.0/index.min.js" async></script>
   <script src="js/script.min.js"></script>
 </body>
 

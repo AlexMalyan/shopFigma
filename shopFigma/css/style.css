@@ -47,7 +47,7 @@ body {
 }
 
 .container {
-  padding: 0 calc(50% - 1140px/ 2);
+  padding: 0 calc(50% - 1140px / 2);
 }
 
 .icon-box {
@@ -266,10 +266,6 @@ button::-moz-focus-inner {
   margin-left: 41px;
 }
 
-.header__user {
-  margin: 0 33px 0;
-}
-
 /**
  * ----------------------------------------
  * animation vibrate-1
@@ -471,6 +467,8 @@ button::-moz-focus-inner {
 .filter details > summary {
   list-style: none;
   cursor: pointer;
+  transition: color .3s;
+  /* плавная смена цвета */
 }
 
 .filter details[open] summary ~ * {
@@ -505,12 +503,18 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
+.filter__details[open] > summary {
+  color: #F16D7F;
+  fill: #F16D7F;
+}
+
 .filter__details-summary {
   display: block;
   outline-style: none;
   /* удалить обводку при фокусе */
   cursor: pointer;
   text-transform: uppercase;
+  margin-left: 5px;
   transition: all 0.2s ease-out;
 }
 
@@ -535,6 +539,14 @@ button::-moz-focus-inner {
   padding: 0 16px 16px 16px;
 }
 
+.filter__details-drop-item[open] > summary {
+  color: #F16D7F;
+}
+
+.filter__details-drop-item > summary {
+  color: black;
+}
+
 .filter__details-drop-header {
   display: block;
   border-left: 5px #F16D7F solid;
@@ -549,7 +561,6 @@ button::-moz-focus-inner {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #F16D7F;
   padding: 11px 0 11px 11px;
   margin: 24px 0 0 0;
 }
@@ -710,6 +721,7 @@ button::-moz-focus-inner {
 
 .card {
   flex: 0 1 calc(33.333% - 30px);
+  min-width: 360px;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -925,6 +937,11 @@ button::-moz-focus-inner {
   text-align: center;
 }
 
+.block__subscribe-form {
+  width: 95%;
+  display: flex;
+}
+
 .block__subscribe-input {
   border: none;
   background: #E1E1E1;
@@ -957,6 +974,7 @@ button::-moz-focus-inner {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
+  z-index: 1;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -1004,6 +1022,7 @@ button::-moz-focus-inner {
 }
 
 .breadcrumb__item-link--active {
+  font-weight: 700;
   color: #F16D7F;
 }
 
@@ -1018,7 +1037,6 @@ button::-moz-focus-inner {
 
 .copyright__rights {
   font-size: 16px;
-  line-height: 19px;
   color: #FBFBFB;
 }
 
@@ -1672,4 +1690,120 @@ end .p-desc */
 
 .order-total__button:hover {
   background-color: #f592a0;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 2vw;
+  }
+
+  .filters {
+    justify-content: space-between;
+  }
+
+  .sort {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1120px) {
+  .cards {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 936px) {
+  .sort {
+    flex-basis: 60%;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-block__item--mg {
+    margin: 0 42px 0 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__user,
+  .header__cart {
+    display: none;
+  }
+
+  .filter__details-header {
+    display: none;
+  }
+
+  .filter__details-icon {
+    width: 38px;
+    height: 25px;
+  }
+
+  .filter__details[open] {
+    position: absolute;
+    min-width: 300px;
+  }
+
+  .card {
+    margin-bottom: 16px;
+  }
+
+  .feature {
+    flex-direction: column;
+  }
+
+  .feature__item {
+    margin: 47px 0;
+  }
+
+  .feature__item:nth-child(2) {
+    margin: 0;
+  }
+
+  .block {
+    background: url("../img/photo_subscribe_mobile.jpg") no-repeat top center scroll #F1E4E6;
+    background-size: cover;
+    flex-direction: column;
+    min-height: 550px;
+    justify-content: space-around;
+  }
+
+  .block__quote {
+    font-size: 18px;
+  }
+
+  .block__subscribe-text {
+    font-size: 14px;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .breadcrumb ul {
+    padding: 0;
+  }
+
+  .copyright {
+    min-height: 143px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .copyright__social {
+    margin-bottom: 25px;
+  }
+
+  .filters {
+    flex-basis: 10%;
+  }
+
+  .sort {
+    flex-basis: 80%;
+  }
+
+  .sort__item {
+    font-size: 12px;
+  }
 }

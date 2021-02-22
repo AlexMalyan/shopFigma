@@ -116,7 +116,7 @@
 
 // Бэкграунд на всю ширину экрана.
 // пример: @include cover-background("../img/main.jpg", top, center, scroll, #fc0);
-@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed", $background-color:"#fc0" ) {
+@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed", $background-color:"red" ) {
 	background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment) unquote($background-color); 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

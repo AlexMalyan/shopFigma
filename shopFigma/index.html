@@ -106,17 +106,17 @@
     <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
-    <button id="icon-burger" class="header__link header__link--burger btn-clear">
+    <button id="icon-burger" class="header__burger header__link header__link--burger btn-clear">
       <svg class="header-block__item">
         <use xlink:href="#burger"></use>
       </svg>
     </button>
-    <a href="registration.html" class="header__link">
+    <a href="registration.html" class="header__user header__link">
       <svg class="header-block__item header-block__item--mg">
         <use xlink:href="#user"></use>
       </svg>
     </a>
-    <a href="cart.html" class="header__link">
+    <a href="cart.html" class="header__cart header__link">
       <svg class="header-block__item">
         <use xlink:href="#cart"></use>
       </svg>
@@ -187,23 +187,28 @@
     </nav>
   </div>
 </header>
-  <div class="hero">
-    <div class=" wrapper">
-      <div class="row">
-        <div class="col-6">
-          <img src="img/hero_man.png" alt="hero men" class="hero__img">
-        </div>
-        <div class="col-6 hero__title">
-          <div class=" hero__title-block">
-            <h1>
-              THE BRAND
-              <br>
-              <span>OF LUXERIOUS</span> <span>FASHION</span>
-            </h1>
-          </div>
+  <!--TODO делаю без колонок  -->
+  <div class="hero container">
+    <!-- <div class=" wrapper"> -->
+    <div class="row">
+      <div class="col-6">
+        <picture class="hero__img">
+          <source srcset="img/hero_man.webp" type="image/webp">
+          <source srcset="img/hero_man.png" type="image/jpeg">
+          <img src="img/hero_man.png" alt="hero man!">
+        </picture>
+      </div>
+      <div class="col-6 hero__title">
+        <div class=" hero__title-block">
+          <h1>
+            THE BRAND
+            <br>
+            <span>OF LUXERIOUS</span> <span>FASHION</span>
+          </h1>
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </div>
   <section class="offer container">
     <a href="catalog.html" class="offer__item">
@@ -438,7 +443,6 @@
 
 
 </div>
-
   </section>
   
   <!-- FOOTER -->
@@ -456,7 +460,7 @@
     <p class="block__subscribe-text">
       FOR OUR NEWLETTER AND PROMOTION
     </p>
-    <form class="subscribe" action="#">
+    <form class="block__subscribe-form" action="#">
       <input type="email" name="" id="" placeholder="Enter Your Email" class="block__subscribe-input">
       <button type="submit" class="block__subscribe-submit" name="submitbtn" value="subm">Subscribe</button>
     </form>
@@ -483,6 +487,12 @@
 <!-- / FOOTER -->
   <script src="js/script.min.js"></script>
 
+  <picture>
+    <source srcset="img/ pic}.webp" type="image/webp">
+    <source srcset="img/ pic}.jpg" type="image/jpeg">
+    sadist img/sadist"
+    <img src="img/ pic}.jpg" alt="Alt Text!">
+  </picture>
 </body>
 
 </html>

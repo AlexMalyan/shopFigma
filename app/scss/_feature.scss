@@ -2,11 +2,17 @@
   display: flex;
   justify-content: space-between;
   background: $black;
+  @media (max-width: 375px){
+    flex-direction: column;
+  }
   &__item{
    max-width: 33,3333%;   
     margin: $sp*7 0;
     text-align: center;
     color:$white;
+    @media (max-width: 375px){
+      margin: 47px 0;
+    }
   & h4{
     font-size: 20px;
     line-height: 24px;
@@ -21,6 +27,9 @@
   }
    &:nth-child(2){
     margin: $sp*7 $sp*2;
+    @media (max-width: 375px){
+      margin: 0;
+    }
    }
    &:hover svg{
      transform: scale(1.25);

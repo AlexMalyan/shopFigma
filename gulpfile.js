@@ -10,6 +10,7 @@ let path = {
     css: project_folder + "/css/",
     js: project_folder + "/js/",
     img: project_folder + "/img/",
+    webp: project_folder + "/webp/",
     fonts: project_folder + "/fonts/",
   },
 
@@ -47,7 +48,8 @@ let { src, dest } = require('gulp'),
   imagemin = require("gulp-imagemin"),
   svgSprite = require("gulp-svg-sprite"),
   ttf2woff = require("gulp-ttf2woff"),
-  ttf2woff2 = require("gulp-ttf2woff2");
+  ttf2woff2 = require("gulp-ttf2woff2"),
+  webp = require("imagemin-webp");
 
 
 // функции
@@ -154,6 +156,22 @@ gulp.task('svgSprite', function () {
     .pipe(dest(path.build.img))
 })
 
+// WEBP
+// Simple task to convert png to webp
+gulp.task('webp', function () {
+  return gulp.src([source_folder + "/img/**/*.{jpg,png}"])
+    // .src([source_folder + '/iconsprite/*.svg'])
+    .pipe(
+      imagemin({
+        verbose: true,
+        plugins: webp({ quality: 70 })
+      })
+    )
+    .pipe(rename({ extname: ".webp" }))
+    // .pipe(extReplace(".webp"))
+    .pipe(gulp.dest(path.build.webp));
+});
+
 function fontsStyle(params) {
   let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
   if (file_content == '') {
@@ -169,9 +187,6 @@ function fontsStyle(params) {
   }
 }
 
-function cb() {
-
-}
 
 function watchFiles() {
   gulp.watch([path.watch.html], html);

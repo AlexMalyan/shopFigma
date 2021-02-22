@@ -2,6 +2,13 @@
 margin: 51px 0 64px;
 display: flex;
 z-index: 1;
+@media (max-width: 375px) {      
+  flex-basis: 10%;
+}
+@media (max-width: 1170px){
+  justify-content: space-between;
+}
+
 
 }
 
@@ -9,12 +16,28 @@ z-index: 1;
   flex-basis: 30%;
     display: inline-flex;
     justify-content: space-between;
+    @media (max-width: 1170px){     
+      justify-content: space-between;
+    }
+    @media (max-width: 936px){
+      flex-basis: 60%;
+    }
+    @media (max-width: 375px) {      
+      flex-basis: 80%;
+    }
+    // ------------------------------------------------
     
     &__item{
      text-transform: uppercase;
      color: $c-grey;
+     @media (max-width: 375px){
+       font-size: 12px;
+     }
      
       position: relative; 
+      &:nth-child(2){
+
+      }
     }
     &__check{
       display: none;

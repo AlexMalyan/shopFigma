@@ -57,14 +57,21 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
   text-align: left;
+  @media (max-width: 1120px){
+    justify-content: space-around;
+  }
 }
 .card{
     flex: 0 1 calc(33.333% - 30px);
+    min-width: 360px;
     display: flex;
     flex-direction: column;
     margin-bottom: $sp*2;
     background: #F8F8F8;
     text-decoration: none;
+    @media (max-width: 375px){
+      margin-bottom: 16px;
+    }
     &__img{
       position: relative;
       &:hover .card__overlay{

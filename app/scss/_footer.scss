@@ -5,10 +5,14 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 color: #FBFBFB;
+@media (max-width: 375px){
+  min-height: 143px;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
 
   &__rights {
     font-size: 16px;
-    line-height: 19px;    
     color: #FBFBFB; 
   }
 
@@ -17,6 +21,9 @@ color: #FBFBFB;
     padding-left: 0px;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: 375px){
+      margin-bottom: 25px;
+    }
       &:last-child{
         margin-right: 0px;
       }    

@@ -54,5 +54,18 @@ npm gulp
 </body>
  ``` 
  сделана страница CART
- [gulp-file-include инструкция](https://www.npmjs.com/package/gulp-file-include/ "gulp-file-include")
+ [gulp-file-include инструкция](https:www.npmjs.com/package/gulp-file-include/ "gulp-file-include")
+
+ ---
+ ### Пример работы плагина GULP-MEDIA c SCSS
+ ```
+ span{
+        font-size: 20px;
+        @media (max-width: 767px) {font-size: 15px;}
+ }
+ div{
+   font-size: 30px;
+   @media (max-width: 767px) {font-size: 20px;}
+ }
+ ```
 
