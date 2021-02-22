@@ -38,7 +38,7 @@ npm gulp
   { "title": "One more post", "text": "<p>lorem ipsum...</p>" }
 ]
   ```
-  ### создаю файл loop-article.html
+  ### Создаю файл loop-article.html
 
   ```
   <article>
@@ -47,7 +47,7 @@ npm gulp
 </article>
   ```
 
- ### Записываем в тело .html
+ ### Записываю в тело .html
  ```
  <body>
   @@loop("loop-article.html", "data.json")
