@@ -9,7 +9,7 @@ padding-bottom: $shift;
 
 
 
-// TODO сделать миксин для картинки отсюда https://proglib.io/p/responsive-images/
+// сделать миксин для картинки отсюда https://proglib.io/p/responsive-images/
   &__img {
     object-fit: cover;
     height: auto;
@@ -57,7 +57,7 @@ z-index: 5;
  
  &-container{
    background-color: $white;
-   width: 1140px;
+   max-width: 1140px;
    margin: -$shift auto $sp*8;
    border: 1px solid #EAEAEA;
    
@@ -98,6 +98,10 @@ z-index: 5;
     font-size: 14px;
     text-align: center;
     color: #5E5E5E;
+    @media (max-width: 375px){
+      width: 95%;
+      font-size: 16px;
+    }
   }
 
   &__price {
@@ -122,6 +126,9 @@ z-index: 5;
     min-width: 40%;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 375px){
+      width: 95%;
+    }
   }
 
   &__btn {

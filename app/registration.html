@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('_head.html', {"title": "Brand | Registration"})
 
 <body>
-  @@include('_iconsprite.html')
   @@include_once('_header.html')
   @@include('_breadcrumb.html', {
   "h1":"Registration"
@@ -17,7 +16,6 @@
           <legend class="register-form__legend">Your Name</legend>
           <input type="text" placeholder="First Name"><br>
           <input type="text" placeholder="Last name"><br>
-          <!-- TODO доработать кнопки -->
           <div class="register-form__inner">
             <div class="register__form-input">
               <input id="male" class="input-radio register-form__radio" type="radio" name="male" value="rm">
@@ -77,14 +75,6 @@
     </div>
 
   </main>
-  <section class="feature container">
-    @@loop('_feature-item.html',[
-    {"img":"driver", "title":"Free Delivery"},
-    {"img":"coupon", "title":"Sales & discounts"},
-    {"img":"crown", "title":"Quality assurance"},
-    ])
-
-  </section>
   @@include('_footer.html')
   <script src="js/script.min.js"></script>
 </body>

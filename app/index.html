@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('_head.html', {
 "title": "The Brand | main"
 })
 
 <body>
-  @@include('_iconsprite.html')
   @@include('_header.html')
-  <!--TODO делаю без колонок  -->
   <div class="hero container">
-    <!-- <div class=" wrapper"> -->
-    <div class="row">
-      <div class="col-6">
-        <picture class="hero__img">
-          <source srcset="img/hero_man.webp" type="image/webp">
-          <source srcset="img/hero_man.png" type="image/jpeg">
-          <img src="img/hero_man.png" alt="hero man!">
-        </picture>
-      </div>
-      <div class="col-6 hero__title">
-        <div class=" hero__title-block">
-          <h1>
-            THE BRAND
-            <br>
-            <span>OF LUXERIOUS</span> <span>FASHION</span>
-          </h1>
-        </div>
+    <div class="hero__slider">
+
+      <picture class="hero__img">
+        <source media="(max-width: 768px)" srcset="img/hero_man-tablet.png">
+        <img src="img/hero_man.png" alt="hero man!">
+      </picture>
+    </div>
+    <div class=" hero__title">
+      <div class=" hero__title-block">
+        <h1>
+          THE BRAND
+          <br>
+          <span>OF LUXERIOUS</span> <span>FASHION</span>
+        </h1>
       </div>
     </div>
-    <!-- </div> -->
   </div>
   <section class="offer container">
     @@loop('_offer-item.html',[
@@ -41,7 +35,11 @@
         <p> LUXIROUS & TRENDY</p>
         <h3> ACCESORIES</h3>
       </div>
-      <img src="img/ACCESORIES.jpg" alt="accesories">
+      <picture class="hero__img">
+        <source media="(max-width: 375px)" srcset="img/ACCESORIES-mobile.jpg">
+        <img src="img/ACCESORIES.jpg" alt="accesories">
+      </picture>
+
 
     </a>
   </section>
@@ -68,13 +66,6 @@
   <!-- @@include('_feedback-video.html') -->
   @@include('_footer.html')
   <script src="js/script.min.js"></script>
-
-  <picture>
-    <source srcset="img/ pic}.webp" type="image/webp">
-    <source srcset="img/ pic}.jpg" type="image/jpeg">
-    sadist img/sadist"
-    <img src="img/ pic}.jpg" alt="Alt Text!">
-  </picture>
 </body>
 
 </html>
