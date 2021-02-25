@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,10 @@
 
 <body>
   <svg width="0" height="0" class="hidden" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="v-icon">
+    <path
+      d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z">
+  </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 29" id="cart">
     <path
       d="M27.199 29a2.477 2.477 0 11.2 0h-.2zM7.751 26.32a2.68 2.68 0 115.364 0 2.68 2.68 0 01-5.366 0h.002zm3.8-5.634a1.184 1.184 0 01-1.145-.867L5.573 2.364H2.18A1.182 1.182 0 012.18 0h4.281a1.183 1.183 0 011.144.868l4.833 17.455h13.178l4.383-10.048h-14.6a1.183 1.183 0 110-2.365h16.413a1.178 1.178 0 01.986.533 1.193 1.193 0 01.1 1.122l-5.405 12.412a1.184 1.184 0 01-1.084.709H11.551z">
@@ -100,9 +104,9 @@
     <path d="M0 23v-2.69h32V23H0zm0-10.24v-2.69h32v2.69H0zM0 2.69V0h32v2.69H0z"></path>
   </symbol>
 </svg>
-  <header class="header container">
+<header class="header container">
   <div class="header-block">
-    <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
     <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
@@ -187,28 +191,23 @@
     </nav>
   </div>
 </header>
-  <!--TODO делаю без колонок  -->
   <div class="hero container">
-    <!-- <div class=" wrapper"> -->
-    <div class="row">
-      <div class="col-6">
-        <picture class="hero__img">
-          <source srcset="img/hero_man.webp" type="image/webp">
-          <source srcset="img/hero_man.png" type="image/jpeg">
-          <img src="img/hero_man.png" alt="hero man!">
-        </picture>
-      </div>
-      <div class="col-6 hero__title">
-        <div class=" hero__title-block">
-          <h1>
-            THE BRAND
-            <br>
-            <span>OF LUXERIOUS</span> <span>FASHION</span>
-          </h1>
-        </div>
+    <div class="hero__slider">
+
+      <picture class="hero__img">
+        <source media="(max-width: 768px)" srcset="img/hero_man-tablet.png">
+        <img src="img/hero_man.png" alt="hero man!">
+      </picture>
+    </div>
+    <div class=" hero__title">
+      <div class=" hero__title-block">
+        <h1>
+          THE BRAND
+          <br>
+          <span>OF LUXERIOUS</span> <span>FASHION</span>
+        </h1>
       </div>
     </div>
-    <!-- </div> -->
   </div>
   <section class="offer container">
     <a href="catalog.html" class="offer__item">
@@ -235,7 +234,11 @@
         <p> LUXIROUS & TRENDY</p>
         <h3> ACCESORIES</h3>
       </div>
-      <img src="img/ACCESORIES.jpg" alt="accesories">
+      <picture class="hero__img">
+        <source media="(max-width: 375px)" srcset="img/ACCESORIES-mobile.jpg">
+        <img src="img/ACCESORIES.jpg" alt="accesories">
+      </picture>
+
 
     </a>
   </section>
@@ -486,13 +489,6 @@
 </footer>
 <!-- / FOOTER -->
   <script src="js/script.min.js"></script>
-
-  <picture>
-    <source srcset="img/ pic}.webp" type="image/webp">
-    <source srcset="img/ pic}.jpg" type="image/jpeg">
-    sadist img/sadist"
-    <img src="img/ pic}.jpg" alt="Alt Text!">
-  </picture>
 </body>
 
 </html>

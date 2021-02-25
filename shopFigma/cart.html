@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,14 @@
   <title>BRAND | SHOPING CART</title>
   <script src="https://kit.fontawesome.com/c59cef1d7b.js" crossorigin="anonymous"></script>
 </head>
+<!-- TODO SHOPPING CART adaptiv -->
 
 <body>
   <svg width="0" height="0" class="hidden" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="v-icon">
+    <path
+      d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z">
+  </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 29" id="cart">
     <path
       d="M27.199 29a2.477 2.477 0 11.2 0h-.2zM7.751 26.32a2.68 2.68 0 115.364 0 2.68 2.68 0 01-5.366 0h.002zm3.8-5.634a1.184 1.184 0 01-1.145-.867L5.573 2.364H2.18A1.182 1.182 0 012.18 0h4.281a1.183 1.183 0 011.144.868l4.833 17.455h13.178l4.383-10.048h-14.6a1.183 1.183 0 110-2.365h16.413a1.178 1.178 0 01.986.533 1.193 1.193 0 01.1 1.122l-5.405 12.412a1.184 1.184 0 01-1.084.709H11.551z">
@@ -100,9 +105,9 @@
     <path d="M0 23v-2.69h32V23H0zm0-10.24v-2.69h32v2.69H0zM0 2.69V0h32v2.69H0z"></path>
   </symbol>
 </svg>
-  <header class="header container">
+<header class="header container">
   <div class="header-block">
-    <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
     <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
@@ -192,16 +197,13 @@
  -->
 <div class="breadcrumb container">
   <h1 class="breadcrumb__h1">shopping cart </h1>
-
-  <!-- TODO Оставил до следущего урока для разбора -->
   <!-- arr в gulpfile html->context -->
   
 </div>
   <!-- TODO переделать блоки -->
-  <div class="order wrapper">
-    <div class="row">
-      <div class="col-7 order-basket">
-        <!-- order-basket -->
+  <div class="order container">
+    <div class="order-basket">
+      <!-- order-basket -->
 <div class="order-basket__item">
   <button class="order-basket__close btn-clear">
     <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -254,20 +256,21 @@
   </div>
 </div>
 <!-- /order basket -->
-        <div class="order-basket__buttons">
-          <a href="#" class="order-basket__button">
-            CLEAR SHOPPING CART
-          </a>
-          <a href="catalog.html" class="order-basket__button">
-            CONTINUE SHOPPING</a>
-        </div>
+      <div class="order-buttons">
+        <a href="#" class="order-buttons__btn">
+          CLEAR SHOPPING CART
+        </a>
+        <a href="catalog.html" class="order-buttons__btn">
+          CONTINUE SHOPPING</a>
       </div>
+    </div>
 
-      <div class="col-5 order-forms">
-        <!-- order form -->
-<div class="order-fom">
-  <h3 class="order-fom__title">SHIPPING ADRESS</h3>
-  <form class="order-fom__form">
+
+    <div class="order-forms">
+      <!-- order form -->
+<div class="order-form">
+  <h3 class="order-form__title">SHIPPING ADRESS</h3>
+  <form class="order-form__form">
     <input type="text" class="order-form__input" placeholder="Bangladesh">
     <input type="text" class="order-form__input" placeholder="State">
     <input type="text" class="order-form__input" placeholder="Postcode / Zip">
@@ -290,8 +293,8 @@
 
 </div>
 
-      </div>
     </div>
+
   </div>
 
   <!-- FOOTER -->

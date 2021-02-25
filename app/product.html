@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('_head.html', {"title": "Brand | PRODUCT"})
 
 <body>
-  @@include('_iconsprite.html')
   @@include('_header.html')
   @@include('_breadcrumb.html', {
   "h1":"NEW ARRIVALS",
@@ -19,12 +18,11 @@
       @@loop('_card.html',[
       {"img": "1", "alt": "product-4", "link": "product.html"},
       {"img": "2", "alt": "product-3", "link": "product.html"},
-      {"img": "3", "alt": "product-6", "link": "product.html"},
+
       ])
     </div>
   </section>
   <!-- end product-offer -->
-  <!-- TODO для удобства вынесу в отдельный include -->
   @@include('_footer.html')
   <script src="js/script.min.js"></script>
 </body>

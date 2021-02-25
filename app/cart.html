@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('_head.html', {"title": "BRAND | SHOPING CART"})
+<!-- TODO SHOPPING CART adaptiv -->
 
 <body>
-  @@include('_iconsprite.html')
   @@include('_header.html')
   @@include('_breadcrumb.html',{"h1":"shopping cart"})
   <!-- TODO переделать блоки -->
-  <div class="order wrapper">
-    <div class="row">
-      <div class="col-7 order-basket">
-        @@loop('cart/_order.html',[
-        {"img":"4"},
-        {"img":"22"},
+  <div class="order container">
+    <div class="order-basket">
+      @@loop('cart/_order.html',[
+      {"img":"4"},
+      {"img":"22"},
 
-        ])
-        <div class="order-basket__buttons">
-          <a href="#" class="order-basket__button">
-            CLEAR SHOPPING CART
-          </a>
-          <a href="catalog.html" class="order-basket__button">
-            CONTINUE SHOPPING</a>
-        </div>
-      </div>
-
-      <div class="col-5 order-forms">
-        @@include('cart/_order-form.html')
-
+      ])
+      <div class="order-buttons">
+        <a href="#" class="order-buttons__btn">
+          CLEAR SHOPPING CART
+        </a>
+        <a href="catalog.html" class="order-buttons__btn">
+          CONTINUE SHOPPING</a>
       </div>
     </div>
+    <div class="order-forms">
+      @@include('cart/_order-form.html')
+
+    </div>
+
   </div>
 
   @@include_once('_footer.html')

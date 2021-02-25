@@ -1,62 +1,80 @@
 .order{
+  display: flex;
+  justify-content: space-between;
   margin-top: $sp*6;
   margin-bottom: $sp*8;
-}
-.order-basket {
 
-&__close{  
-  position: absolute;
-  top: 28px;
-  right: 22px;
-  cursor: pointer;
-  svg{    
-  width: 18px;
-  height: 18px;
-  fill: #575757;  
+  @media (max-width: 1073px){
+    flex-direction: column;
+    margin-top: $sp*4;
   }
-  &:hover{
-    fill:lighten($color-text, 8%); ;
+  @media (max-width: 375px){
+    margin-top: $sp*2.66;
   }
 }
+// ORDER BASKET
+.order-basket {
+flex-basis: 60%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+  &__close{  
+    position: absolute;
+    top: 28px;
+    right: 22px;
+    cursor: pointer;
+    svg{    
+    width: 18px;
+    height: 18px;
+    fill: #575757;  
+    }
+    &:hover{
+      fill:lighten($color-text, 8%); ;
+    }
+  }
   &__item {
+    align-self:center;
     display: flex;
-    min-width: 650px;
+    // min-width: 650px;
     width: 100%;
     min-height: 300px;
     position: relative;
     margin-bottom: 40px;
     box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
     @include transit(box-shadow,.3s,ease-out);
+
+    @media (max-width: 700px){
+      // width: 358px;
+      // min-height: auto
+    }
     &:hover{
       box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.13);
     }
-  }
 
-  &__item-img-wr {
-    max-width: 262px;
+    &-img-wr {
+      flex: 0 0 40%;
   }
+    &-img {
+      object-fit: cover;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  &__item-img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    margin: 0 auto; 
-  }
+    &-content {
+      max-width: 40%;
+      margin: 22px auto auto 31px;
+    }
 
-  &__item-content {
-    max-width: 40%;
-    margin: 22px auto auto 31px;
-  }
-
-  &__item-name {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: $black;
-    margin-bottom: 42px;
-  }
+    &-name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: $black;
+      margin-bottom: 42px;
+    }
+  } 
 
   &__item-list {
     list-style-type: none;
@@ -83,25 +101,7 @@
 
   &__li--price {
     color: $color-accent;
-  }
-  &__buttons{
-    display: flex;
-    justify-content: space-between;
-  }
-  &__button{
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    color: $black;
-    border: 1px solid #A4A4A4;
-    padding: 17px 40px;
-    &:hover{
-      color: lighten($color-text, 8%);
-      border: 1px solid lighten(#A4A4A4, 10%);
-
-    }
-  }
+  }  
   &__qty{  
    width: 44px;
    height: 25px;
@@ -112,23 +112,62 @@
    line-height: 22px;
     color: #656565;
   }
-
 }
-
-
-
+// ORDER BUTTONS
+.order-buttons{
+  grid-area: button;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1073px){
+    justify-content: space-around;
+  }
+  &__btn{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+    border: 1px solid #A4A4A4;
+    padding: 17px 40px;
+    &:hover{
+      color: lighten($color-text, 8%);
+      border: 1px solid lighten(#A4A4A4, 10%);
+  
+    }
+  }
+}
 
 // ORDER FORM
 .order-forms{
+  grid-area: form;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
+  @media (max-width: 1073px){
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 60px;
+  }
+  @media (max-width: 791px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+  }
 }
-.order-fom {
+.order-form {
   width: 360px;
   min-height: 306px;
   margin-bottom: 40px;
+  @media (max-width: 1073px){
+    flex-basis: 48%;
+  }
+  @media (max-width: 791px){
+    min-width: 100%;
+  }
+
   &__title {
     text-align: left;
     font-weight: 300;
@@ -136,13 +175,12 @@
     line-height: 19px;
     color: $black;
     margin: 0 0 20px;
-
   }
 }
 .order-form {
 
   &__input {
-    width: 360px;
+    width: 100%;
     font-style: normal;
     font-weight: 300;
     font-size: 13px;
@@ -171,7 +209,6 @@
       color: #B1B1B1;
       border: 1px solid #B1B1B1;
     }
-
   }
 }
 // @include sep-h(80%,2px,blue);
@@ -180,6 +217,12 @@
   width: 360px;
   background: #F5F3F3;
   text-align: right;
+  @media (max-width:1073px){
+    flex-basis: 48%;
+  }
+  @media (max-width: 791px){
+    min-width: 100%;
+  }
   &__wr{
     margin: 40px 40px;
   }
@@ -187,23 +230,18 @@
     font-size: 11px;
     font-weight: 400;    
   }
-
   &__sub-sum {
     margin-left: 25px;
-
   }
-
   &__grand {
     margin: $sp 0 20px;
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
   }
-
   &__grand-sum {
     margin-left: 25px;
   }
-
   &__hr {
     @include sep-h(100%,1px,#E2E2E2);
     margin-bottom: 17px+$sp;
@@ -213,7 +251,6 @@
     font-weight: 700;
 
   }
-
   &__button {
     text-decoration: none;
     padding: $sp 40px;

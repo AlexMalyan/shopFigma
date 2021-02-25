@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  @media (max-width: 375px){
-    @include cover-background("../img/photo_subscribe_mobile.jpg", top, center,scroll,$bgc-hero);
+  @media (max-width: 768px){
+    @include cover-background("../img/photo_subscribe_mobile.jpg", center, center,scroll,$bgc-hero);
     flex-direction: column;
     min-height: 550px;
     justify-content: space-around; 
