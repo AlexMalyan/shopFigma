@@ -8,7 +8,8 @@ margin-top: $sp*4;
   @media (max-width: 768px){
     flex: 0 1 calc(33.333% - 15px);
   }
-  @media (max-width: 375px){
+ 
+  @media (max-width: 620px){
     /* Три значения: flex-grow | flex-shrink | flex-basis */
     flex: 1 0 100%;
   }

@@ -1,7 +1,7 @@
 @@include('_iconsprite.html')
 <header class="header container">
   <div class="header-block">
-    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <a href="@@link"><img src="img/logo.png" alt="logo" class="logo"></a>
     <img src="img/icons/icons.svg#zoom-in" alt="search" width="29" height="29" class="header__search">
   </div>
   <div class="header-block">
@@ -16,6 +16,7 @@
       </svg>
     </a>
     <a href="cart.html" class="header__cart header__link">
+      <div class="header__cart-cost">5</div>
       <svg class="header-block__item">
         <use xlink:href="#cart"></use>
       </svg>
@@ -102,10 +103,10 @@
           </ul>
         </li>
       </ul>
-      <button class="menu__nav-close btn-clear">
-        <svg class="menu__nav-close-icon">
+      <button class="menu__nav-close btn-clear close-button ">
+        <!-- <svg class="menu__nav-close-icon">
           <use xlink:href="#close"></use>
-        </svg>
+        </svg> -->
       </button>
     </nav>
   </div>

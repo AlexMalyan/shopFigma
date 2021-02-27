@@ -9,15 +9,15 @@ margin-bottom: $sp*6;
 & input[type="text"], 
 input[type="email"],
 input[type="password"]{
-  width: 360px;
+  width: 100%;
   background: #FFFFFF;
   font-weight: 300;
-font-size: 13px;
-line-height: 16px;
-color: #B1B1B1;
-padding: 15px;
-border: 1px solid #A4A4A4;
-margin-bottom: $sp+5px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  padding: 15px;
+  border: 1px solid #A4A4A4;
+  margin-bottom: $sp+5px;
 }
 &-button{
   border: none;
@@ -38,10 +38,14 @@ margin-bottom: $sp+5px;
 }
 .register-form {
 flex-basis: 48%;
+@media (max-width: 725px){
+  flex-basis: 100%;
+}
 & fieldset{
   border: none;
   margin: 0;
   padding: 0;
+  
 }
 & fieldset:first-child{
   margin-bottom: $sp*2;
@@ -63,7 +67,7 @@ flex-basis: 48%;
     margin-bottom: $sp*2+10px;
   }
   &__inner{
-    max-width: 360px;
+    max-width: 50%;
     display: flex;
     justify-content: space-between;
   }
@@ -80,6 +84,9 @@ flex-basis: 48%;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
+  @media (max-width: 725px){
+    flex-basis: 100%;
+  }
   @media (max-width: 375px){
   flex-basis: 100%;
   }

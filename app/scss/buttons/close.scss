@@ -1,0 +1,77 @@
+// <a href="#" class="close-button"></a> пример
+.close-button {
+  $size: 23px;
+  height: $size;
+  width: $size;
+  position: relative;
+  box-sizing: border-box;
+  line-height: $size;
+  display: inline-block;
+  &:before .close-button--menu-size, &:after .close-button--menu-size 
+  {
+    $width: 12px;
+    $height: 3px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: $color-text;
+    transition: all 0.25s ease-out;    
+    
+  }
+
+  &:before, &:after {
+      $width: 23px;
+      $height: 3px;
+      transform: rotate(-45deg);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -$height/2;
+      margin-left: -$width/2;
+      display: block;
+      height: $height;
+      width: $width;
+      background-color: $color-text;
+      transition: all 0.25s ease-out;      
+  }
+
+  &:after {
+      transform: rotate(-135deg);
+  }
+
+  &:hover {
+
+      &:before, &:after {
+          transform: rotate(0deg);
+      }
+  }
+  &--menu-size{
+    width: 12px;
+    height: 12px;
+    &:before, &:after {
+    $width: 12px;
+    $height: 3px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: $color-text;
+    transition: all 0.25s ease-out;    
+    
+  }
+}
+}

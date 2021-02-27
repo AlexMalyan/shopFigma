@@ -22,7 +22,7 @@
     }
     
   } 
-  &__link:hover svg{
+  &__link:hover{
     fill: $color-accent;
     animation: vibrate-1 0.3s linear both;
   }
@@ -30,8 +30,23 @@
   &__search{
     margin-left: 41px;
   }    
-  &__user{
-    // margin: 0 33px 0;
+  &__cart{
+    position: relative;
+    &-cost{
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      display: block;
+      min-width: 19px;
+      min-height: 19px;
+      border-radius: 50%;
+      font-size: 12px;
+      line-height: 18px;
+      color: $white;
+      background-color: $color-accent;
+      text-align: center;
+      padding: 0px 5px;
+    }
     
   }  
     }
@@ -76,11 +91,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  
   @media (max-width: 768px){
     max-height: 368px;
   }
-  @media (max-width: 375px){
+  @media (max-width: 621px){
     min-height: 363px;
+    justify-content: center;
   }
   
  &__slider {
@@ -90,15 +107,19 @@
     @media (max-width: 768px){
       padding-top: 0;
     }
-    @media (max-width: 375px){
+    @media (max-width: 621px){
      display: none;
+     
     }
   }
   &__img{
-    margin-left: -40%;
-    // margin-top: 10px;
-    @media (max-width: 768px){
+    margin-left: -23%;
+    // margin-top: 10px;    
+    @media (max-width: 894px){
       margin-left:0;
+    }
+    & img{
+      width: 100%;
     }
   }
   &__title{
@@ -107,7 +128,7 @@
     justify-content: center;
     flex: 0 0 50%;
     max-width: 50%;
-    @media (max-width: 375px){
+    @media (max-width: 621px){
       flex: 0 0 100%;
       max-width: 100%;
      }

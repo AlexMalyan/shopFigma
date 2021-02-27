@@ -3,15 +3,13 @@
 @@include('_head.html', {"title": "Brand | Registration"})
 
 <body>
-  @@include_once('_header.html')
+  @@include('_header.html',{"link":"index.html"})
   @@include('_breadcrumb.html', {
   "h1":"Registration"
   })
   <main class="register container">
     <div class="register-form">
-
       <form action="#" class="register-form__reristration">
-
         <fieldset class="register-form__fieldset">
           <legend class="register-form__legend">Your Name</legend>
           <input type="text" placeholder="First Name"><br>
