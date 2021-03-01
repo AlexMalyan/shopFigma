@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/* 
+* @include fluidFontSize(12px, 24px, 375px, 1140px, 18px); 
+* Теперь при ширине экрана меньше 480px шрифт всегда будет 16px, 
+* после 480 он станет резиновым, а 
+* после 1280px всегда будет 24px.
+*/
+
 @font-face {
   font-family: "Lato";
   font-display: swap;
@@ -1685,11 +1692,11 @@ end .p-desc */
 .order-buttons__btn {
   text-decoration: none;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   color: #222224;
   border: 1px solid #A4A4A4;
-  padding: 17px 40px;
+  padding: 1.8vh 3.2vw;
 }
 
 .order-buttons__btn:hover {
@@ -1815,6 +1822,19 @@ end .p-desc */
 
 .order-total__button:hover {
   background-color: #f592a0;
+}
+
+@media (min-width: 375px) {
+  .order-buttons__btn {
+    font-size: 18px;
+    font-size: calc( 0.00261 * 100vw + 11.01961px);
+  }
+}
+
+@media (min-width: 1140px) {
+  .order-buttons__btn {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1170px) {

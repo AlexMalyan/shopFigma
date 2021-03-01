@@ -125,11 +125,11 @@ justify-content: center;
   &__btn{
     text-decoration: none;
     font-weight: 300;
-    font-size: 14px;
+    @include fluidFontSize(12px, 14px, 375px, 1140px, 18px);
     line-height: 17px;
     color: $black;
     border: 1px solid #A4A4A4;
-    padding: 17px 40px;
+    padding: 1.8vh 3.2vw;
     &:hover{
       color: lighten($color-text, 8%);
       border: 1px solid lighten(#A4A4A4, 10%);
